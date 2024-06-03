@@ -3,8 +3,8 @@
 1,2,Brawl,Battlefield,,,1,5,1,1,
 2,3,Brawl,Battlefield,,,1,5,1,1,
 3,4,Brawl,Battlefield,,,1,5,1,1,
-4,5,Brawl,Battlefield,,,1,5,1,1,Y
-5,6,Melee,Final Destination,,,1,5,1,1,Y
+4,5,Brawl,Battlefield,,,1,5,1,1,#1 Contender Brawl
+5,6,Melee,Final Destination,,,1,5,1,1,#1 Contender Special
 6,7,Melee,Final Destination,,,1,5,1,1,
 7,8,Melee,Final Destination,,,1,5,1,1,
 8,9,Melee,Final Destination,,,1,5,1,1,
@@ -17,18 +17,18 @@
 15,16,Melee,Luigi's Mansion,,,1,5,1,2,
 16,17,Melee,Luigi's Mansion,,,1,5,1,2,
 17,18,Melee,Luigi's Mansion,,,1,5,1,2,
-18,19,Melee,Luigi's Mansion,,,12,5,1,2,Y
-19,20,Melee,Luigi's Mansion,,,1,5,1,2,Y
-20,21,Brawl,Mushroomy Kingdom,,,1,5,1,3,Y
+18,19,Melee,Luigi's Mansion,,,12,5,1,2,#1 Contender Tag
+19,20,Melee,Luigi's Mansion,,,1,5,1,2,#1 Contender Animal
+20,21,Brawl,Mushroomy Kingdom,,,1,5,1,3,#1 Contender Human
 21,22,Brawl,Mushroomy Kingdom,,,1,5,1,3,
 22,23,Brawl,Mushroomy Kingdom,,,1,5,1,3,
 23,24,Brawl,Mushroomy Kingdom,,,1,5,1,3,
-24,25,Brawl,Mushroomy Kingdom,,,2,5,1,3,Y
+24,25,Brawl,Mushroomy Kingdom,,,2,5,1,3,#1 Contender Hardcore
 25,26,Melee,Mario Circuit,,,1,5,1,3,
 26,27,Melee,Mario Circuit,,,1,5,1,3,
 27,28,Melee,Mario Circuit,,,1,5,1,3,
 28,29,Melee,Mario Circuit,,,1,5,1,3,
-29,30,Melee,Mario Circuit,,,1,5,1,3,Y
+29,30,Melee,Mario Circuit,,,1,5,1,3,#1 Contender Melee
 30,31,,Rumble Falls,Royal Rumble,Animal Championship,1,5,1,4,
 31,32,,Rumble Falls,Royal Rumble,Unified Tag Team Championship,12,5,1,4,
 32,33,,Rumble Falls,Royal Rumble,Human Championship,1,5,1,4,
@@ -40,25 +40,25 @@
 38,39,Brawl,Bridge of Eldin,,,1,5,2,1,
 39,40,Brawl,Bridge of Eldin,,,1,5,2,1,
 40,41,Brawl,Bridge of Eldin,,,1,5,2,1,
-41,42,Brawl,Bridge of Eldin,,,1,5,2,1,Y
-42,43,Brawl,Bridge of Eldin,,,1,5,2,1,Y
+41,42,Brawl,Bridge of Eldin,,,1,5,2,1,
+42,43,Brawl,Bridge of Eldin,,,1,5,2,1,
 43,44,Melee,Pirate Ship,,,1,5,2,1,
 44,45,Melee,Pirate Ship,,,1,5,2,1,
 45,46,Melee,Pirate Ship,,,1,5,2,1,
 46,47,Melee,Pirate Ship,,,1,5,2,1,
-47,48,Melee,Pirate Ship,,,1,5,2,1,
-48,49,Brawl,Norfair,,,1,5,2,2,Y
+47,48,Melee,Pirate Ship,,,1,5,2,1,#1 contender Animal
+48,49,Brawl,Norfair,,,1,5,2,2,#1 Contender Human
 49,50,Brawl,Norfair,,,1,5,2,2,
-50,51,Brawl,Norfair,,,12,5,2,2,Y
+50,51,Brawl,Norfair,,,12,5,2,2,#1 Contender Tag
 51,52,Brawl,Norfair,,,1,5,2,2,
-52,53,Brawl,Norfair,,,1,5,2,2,Y
+52,53,Brawl,Norfair,,,1,5,2,2,#1 Contender Brawl
 53,54,Melee,Frigate Orpheon,,,1,5,2,2,
 54,55,Melee,Frigate Orpheon,,,1,5,2,2,
 55,56,Melee,Frigate Orpheon,,,1,5,2,2,
-56,57,Melee,Frigate Orpheon,,,1,5,2,2,Y
+56,57,Melee,Frigate Orpheon,,,1,5,2,2,#1 Contender Special
 57,58,Melee,Frigate Orpheon,,,1,5,2,2,
 58,59,Brawl,Yoshi's Island,,,1,5,2,3,
-59,60,Brawl,Yoshi's Island,,,2,5,2,3,Y
+59,60,Brawl,Yoshi's Island,,,2,5,2,3,#1 Contender Hardcore
 60,61,Brawl,Yoshi's Island,,Human Championship,1,5,2,3,
 61,62,Brawl,Yoshi's Island,,,1,5,2,3,
 62,63,Brawl,Yoshi's Island,,,1,5,2,3,
@@ -66,7 +66,7 @@
 64,65,Melee,Halberd,,,1,5,2,3,
 65,66,Melee,Halberd,,,1,5,2,3,
 66,67,Melee,Halberd,,,1,5,2,3,
-67,68,Melee,Halberd,,,1,5,2,3,Y
+67,68,Melee,Halberd,,,1,5,2,3,#1 Contender Melee
 68,69,,Pokemon Stadium 2,Pokeslam,Hardcore Championship,2,5,2,4,
 69,70,,Pokemon Stadium 2,Pokeslam,Unified Tag Team Championship,12,5,2,4,
 70,71,,Pokemon Stadium 2,Pokeslam,Animal Championship,1,5,2,4,
@@ -80,23 +80,23 @@
 78,79,Brawl,Lylat Cruise,,,1,5,3,1,
 79,80,Brawl,Lylat Cruise,,,1,5,3,1,
 80,81,Brawl,Lylat Cruise,,,1,5,3,1,
-81,82,Brawl,Lylat Cruise,,,2,5,3,1,Y
+81,82,Brawl,Lylat Cruise,,,2,5,3,1,#1 Contender Hardcore
 82,83,Melee,Spear Pillar,,,1,5,3,1,
 83,84,Melee,Spear Pillar,,,1,5,3,1,
 84,85,Melee,Spear Pillar,,,12,5,3,1,
-85,86,Melee,Spear Pillar,,,1,5,3,1,
+85,86,Melee,Spear Pillar,,,1,5,3,1,#1 contender Animal
 86,87,Melee,Spear Pillar,,,1,5,3,1,
 87,88,Brawl,Port Town Aero Drive,,,1,5,3,2,
 88,89,Brawl,Port Town Aero Drive,,,1,5,3,2,
 89,90,Brawl,Port Town Aero Drive,,,1,5,3,2,
 90,91,Brawl,Port Town Aero Drive,,,1,5,3,2,
-91,92,Brawl,Port Town Aero Drive,,,1,5,3,2,Y
+91,92,Brawl,Port Town Aero Drive,,,1,5,3,2,#1 Contender Brawl
 92,93,Melee,Castle Siege,,,1,5,3,2,
 93,94,Melee,Castle Siege,,,1,5,3,2,
 94,95,Melee,Castle Siege,,,1,5,3,2,
 95,96,Melee,Castle Siege,,,1,5,3,2,
-96,97,Melee,Castle Siege,,,1,5,3,2,
-97,98,Brawl,"Warioware, Inc.",,,1,5,3,3,
+96,97,Melee,Castle Siege,,,1,5,3,2,#1 contender Special
+97,98,Brawl,"Warioware, Inc.",,"If Sonic wins, he is added to Human championship",1,5,3,3,
 98,99,Brawl,"Warioware, Inc.",,,1,5,3,3,
 99,100,Brawl,"Warioware, Inc.",,,1,5,3,3,
 100,101,Brawl,"Warioware, Inc.",,,1,5,3,3,
@@ -113,37 +113,37 @@
 111,112,,New Pork City,Brawlmania,Hardcore Championship,2,5,3,4,
 112,113,,New Pork City,Brawlmania,Brawl Championship,1,5,3,4,
 113,114,,New Pork City,Brawlmania,Melee Championship,1,5,3,4,
-114,115,,New Pork City,Brawlmania,Smash Bros. Championship ,1,5,3,4,
+114,115,,New Pork City,Brawlmania,,1,5,3,4,
 115,116,Brawl,Distant Planet,,,1,5,4,1,
-116,117,Brawl,Distant Planet,,,12,5,4,1,Y
+116,117,Brawl,Distant Planet,,,12,5,4,1,#1 Contender Tag
 117,118,Brawl,Distant Planet,,,1,5,4,1,
 118,119,Brawl,Distant Planet,,,1,5,4,1,
-119,120,Brawl,Distant Planet,,,1,5,4,1,Y
+119,120,Brawl,Distant Planet,,,1,5,4,1,#1 Contender Brawl
 120,121,Melee,Summit,,,1,5,4,1,
 121,122,Melee,Summit,,,1,5,4,1,
 122,123,Melee,Summit,,,1,5,4,1,
 123,124,Melee,Summit,,,1,5,4,1,
 124,125,Melee,Summit,,,1,5,4,1,
 125,126,Brawl,Skyworld,,,1,5,4,2,
-126,127,Brawl,Skyworld,,,2,5,4,2,Y
+126,127,Brawl,Skyworld,,,2,5,4,2,#1 Contender Hardcore
 127,128,Brawl,Skyworld,,,1,5,4,2,
 128,129,Brawl,Skyworld,,,1,5,4,2,
 129,130,Brawl,Skyworld,,,1,5,4,2,
 130,131,Melee,Mario Bros,,,1,5,4,2,
 131,132,Melee,Mario Bros,,,1,5,4,2,
 132,133,Melee,Mario Bros,,,1,5,4,2,
-133,134,Melee,Mario Bros,,,1,5,4,2,Y
+133,134,Melee,Mario Bros,,,1,5,4,2,#1 Contender Animal
 134,135,Melee,Mario Bros,,,1,5,4,2,
-135,136,Brawl,Flat Zone 2,,,1,5,4,3,Y
+135,136,Brawl,Flat Zone 2,,,1,5,4,3,#1 Contender Human
 136,137,Brawl,Flat Zone 2,,,1,5,4,3,
 137,138,Brawl,Flat Zone 2,,,1,5,4,3,
 138,139,Brawl,Flat Zone 2,,,1,5,4,3,
 139,140,Brawl,Flat Zone 2,,,1,5,4,3,
 140,141,Melee,Pictochat,,,1,5,4,3,
 141,142,Melee,Pictochat,,,1,5,4,3,
-142,143,Melee,Pictochat,,,1,5,4,3,Y
+142,143,Melee,Pictochat,,,1,5,4,3,#1 Contender Special
 143,144,Melee,Pictochat,,,1,5,4,3,
-144,145,Melee,Pictochat,,,1,5,4,3,
+144,145,Melee,Pictochat,,,1,5,4,3,#1 contender Melee
 145,146,,Hanenbow,Money In The Bank,Special Championship,1,5,4,4,
 146,147,,Hanenbow,Money In The Bank,Human Championship,1,5,4,4,
 147,148,,Hanenbow,Money In The Bank,,12,5,4,4,
@@ -162,17 +162,17 @@
 160,161,Melee,Green Hill Zone,,,1,5,5,1,
 161,162,Melee,Green Hill Zone,,,1,5,5,1,
 162,163,Melee,Green Hill Zone,,,1,5,5,1,
-163,164,Melee,Green Hill Zone,,,1,5,5,1,Y
+163,164,Melee,Green Hill Zone,,,1,5,5,1,#1 Contender Melee
 164,165,Brawl,Temple,,,1,5,5,2,
 165,166,Brawl,Temple,,,1,5,5,2,
 166,167,Brawl,Temple,,,1,5,5,2,
 167,168,Brawl,Temple,,,1,5,5,2,
-168,169,Brawl,Temple,,,1,5,5,2,Y
+168,169,Brawl,Temple,,,1,5,5,2,#1 Contender Human
 169,170,Melee,Yoshi's Island,,,1,5,5,2,
 170,171,Melee,Yoshi's Island,,,1,5,5,2,
 171,172,Melee,Yoshi's Island,,,1,5,5,2,
 172,173,Melee,Yoshi's Island,,,1,5,5,2,
-173,174,Melee,Yoshi's Island,,,1,5,5,2,
+173,174,Melee,Yoshi's Island,,,1,5,5,2,#1 contender Animal
 174,175,Brawl,Jungle Japes,,,1,5,5,3,
 175,176,Brawl,Jungle Japes,,,1,5,5,3,
 176,177,Brawl,Jungle Japes,,,1,5,5,3,
@@ -181,7 +181,7 @@
 179,180,Melee,Onett,,,1,5,5,3,
 180,181,Melee,Onett,,,1,5,5,3,
 181,182,Melee,Onett,,,1,5,5,3,
-182,183,Melee,Onett,,,1,5,5,3,
+182,183,Melee,Onett,,,1,5,5,3,#1 contender Special
 183,184,Melee,Onett,,,1,5,5,3,
 184,185,,Corneria,Ignition,Unified Tag Team Championship,12,5,5,4,
 185,186,,Corneria,Ignition,Hardcore Championship,2,5,5,4,
@@ -195,31 +195,31 @@
 193,194,Brawl,Rainbow Cruise,,,1,5,6,1,
 194,195,Brawl,Rainbow Cruise,,,1,5,6,1,
 195,196,Brawl,Rainbow Cruise,,,1,5,6,1,
-196,197,Brawl,Rainbow Cruise,,,2,5,6,1,Y
+196,197,Brawl,Rainbow Cruise,,,2,5,6,1,#1 Contender Hardcore
 197,198,Melee,Green Greens,,,1,5,6,1,
 198,199,Melee,Green Greens,,,1,5,6,1,
 199,200,Melee,Green Greens,,,1,5,6,1,
 200,201,Melee,Green Greens,,,1,5,6,1,
-201,202,Melee,Green Greens,,,1,5,6,1,
+201,202,Melee,Green Greens,,,1,5,6,1,#1 contender Melee
 202,203,Brawl,Big Blue,,,1,5,6,2,
-203,204,Brawl,Big Blue,,,1,5,6,2,Y
+203,204,Brawl,Big Blue,,,1,5,6,2,#1 Contender Human
 204,205,Brawl,Big Blue,,,1,5,6,2,
 205,206,Brawl,Big Blue,,,1,5,6,2,
-206,207,Brawl,Big Blue,,,12,5,6,2,Y
+206,207,Brawl,Big Blue,,,12,5,6,2,#1 Contender Tag
 207,208,Melee,Brinstar,,,1,5,6,2,
 208,209,Melee,Brinstar,,,1,5,6,2,
 209,210,Melee,Brinstar,,,1,5,6,2,
 210,211,Melee,Brinstar,,,1,5,6,2,
-211,212,Melee,Brinstar,,,1,5,6,2,
+211,212,Melee,Brinstar,,,1,5,6,2,#1 contender Animal
 212,213,Brawl,Pokemon Stadium,,,1,5,6,3,
 213,214,Brawl,Pokemon Stadium,,,1,5,6,3,
 214,215,Brawl,Pokemon Stadium,,,1,5,6,3,
 215,216,Brawl,Pokemon Stadium,,,1,5,6,3,
-216,217,Brawl,Pokemon Stadium,,,1,5,6,3,Y
+216,217,Brawl,Pokemon Stadium,,,1,5,6,3,#1 Contender Brawl
 217,218,Melee,Battlefield,,,1,5,6,3,
 218,219,Melee,Battlefield,,,1,5,6,3,
 219,220,Melee,Battlefield,,,1,5,6,3,
-220,221,Melee,Battlefield,,,1,5,6,3,
+220,221,Melee,Battlefield,,,1,5,6,3,#1 contender special
 221,222,Melee,Battlefield,,,1,5,6,3,
 222,223,,Delfino Plaza,Summer Slam,Animal Championship,1,5,6,4,
 223,224,,Delfino Plaza,Summer Slam,Human Championship,1,5,6,4,
@@ -258,36 +258,36 @@
 256,257,Melee,Bridge of Eldin,,,1,5,7,3,
 257,258,Melee,Bridge of Eldin,,,1,5,7,3,
 258,259,Melee,Bridge of Eldin,,,1,5,7,3,
-259,260,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-260,261,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-261,262,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-262,263,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-263,264,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-264,265,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-265,266,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-266,267,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-267,268,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-268,269,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-269,270,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-270,271,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-271,272,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-272,273,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-273,274,,Final Destination,Final Destination  Tourney,5 vs. 6 - Brawl Championship,1,5,7,4,
-274,275,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-275,276,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-276,277,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-277,278,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-278,279,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-279,280,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-280,281,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-281,282,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-282,283,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-283,284,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-284,285,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-285,286,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-286,287,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-287,288,,Final Destination,Final Destination  Tourney,,1,5,7,4,
-288,289,,Final Destination,Final Destination  Tourney,5 vs. 2 - Melee Championship,1,5,7,4,
+259,260,,Final Destination,Final Destination Tournament,,1,5,7,4,
+260,261,,Final Destination,Final Destination Tournament,,1,5,7,4,
+261,262,,Final Destination,Final Destination Tournament,,1,5,7,4,
+262,263,,Final Destination,Final Destination Tournament,,1,5,7,4,
+263,264,,Final Destination,Final Destination Tournament,,1,5,7,4,
+264,265,,Final Destination,Final Destination Tournament,,1,5,7,4,
+265,266,,Final Destination,Final Destination Tournament,,1,5,7,4,
+266,267,,Final Destination,Final Destination Tournament,,1,5,7,4,
+267,268,,Final Destination,Final Destination Tournament,,1,5,7,4,
+268,269,,Final Destination,Final Destination Tournament,,1,5,7,4,
+269,270,,Final Destination,Final Destination Tournament,,1,5,7,4,
+270,271,,Final Destination,Final Destination Tournament,,1,5,7,4,
+271,272,,Final Destination,Final Destination Tournament,,1,5,7,4,
+272,273,,Final Destination,Final Destination Tournament,,1,5,7,4,
+273,274,,Final Destination,Final Destination Tournament,5 vs. 6 - Brawl Championship,1,5,7,4,
+274,275,,Final Destination,Final Destination Tournament,,1,5,7,4,
+275,276,,Final Destination,Final Destination Tournament,,1,5,7,4,
+276,277,,Final Destination,Final Destination Tournament,,1,5,7,4,
+277,278,,Final Destination,Final Destination Tournament,,1,5,7,4,
+278,279,,Final Destination,Final Destination Tournament,,1,5,7,4,
+279,280,,Final Destination,Final Destination Tournament,,1,5,7,4,
+280,281,,Final Destination,Final Destination Tournament,,1,5,7,4,
+281,282,,Final Destination,Final Destination Tournament,,1,5,7,4,
+282,283,,Final Destination,Final Destination Tournament,,1,5,7,4,
+283,284,,Final Destination,Final Destination Tournament,,1,5,7,4,
+284,285,,Final Destination,Final Destination Tournament,,1,5,7,4,
+285,286,,Final Destination,Final Destination Tournament,,1,5,7,4,
+286,287,,Final Destination,Final Destination Tournament,,1,5,7,4,
+287,288,,Final Destination,Final Destination Tournament,,1,5,7,4,
+288,289,,Final Destination,Final Destination Tournament,5 vs. 2 - Melee Championship,1,5,7,4,
 289,290,Brawl,Frigate Orpheon,,,1,5,8,1,
 290,291,Brawl,Frigate Orpheon,,,1,5,8,1,
 291,292,Brawl,Frigate Orpheon,,,1,5,8,1,
@@ -313,7 +313,7 @@
 311,312,Brawl,Pokemon Stadium 2,,,1,5,8,3,
 312,313,Brawl,Pokemon Stadium 2,,,1,5,8,3,
 313,314,Brawl,Pokemon Stadium 2,,,1,5,8,3,
-314,315,Melee,Lylat Cruise,,,12,5,8,3,Y
+314,315,Melee,Lylat Cruise,,,12,5,8,3,#1 Contender Tag
 315,316,Melee,Lylat Cruise,,,1,5,8,3,
 316,317,Melee,Lylat Cruise,,,1,5,8,3,
 317,318,Melee,Lylat Cruise,,,1,5,8,3,
@@ -328,24 +328,24 @@
 326,327,Brawl,Spear Pillar,,,1,5,9,1,
 327,328,Brawl,Spear Pillar,,,1,5,9,1,
 328,329,Brawl,Spear Pillar,,,1,5,9,1,
-329,330,Brawl,Spear Pillar,,,1,5,9,1,Y
+329,330,Brawl,Spear Pillar,,,1,5,9,1,#1 Contender Human
 330,331,Brawl,Spear Pillar,,,1,5,9,1,
 331,332,Melee,Warioware Inc,,,1,5,9,1,
 332,333,Melee,Warioware Inc,,,1,5,9,1,
 333,334,Melee,Warioware Inc,,,1,5,9,1,
-334,335,Melee,Warioware Inc,,,1,5,9,1,
+334,335,Melee,Warioware Inc,,,1,5,9,1,#1 contender Animal
 335,336,Melee,Warioware Inc,,,1,5,9,1,
 336,337,Brawl,Castle Siege,,,1,5,9,2,
 337,338,Brawl,Castle Siege,,,1,5,9,2,
 338,339,Brawl,Castle Siege,,,1,5,9,2,
-339,340,Brawl,Castle Siege,,,2,5,9,2,Y
-340,341,Brawl,Castle Siege,,,1,5,9,2,Y
+339,340,Brawl,Castle Siege,,,2,5,9,2,#1 Contender Hardcore
+340,341,Brawl,Castle Siege,,,1,5,9,2,#1 Contender Brawl
 341,342,Melee,Distant Planet,,,1,5,9,2,
 342,343,Melee,Distant Planet,,,1,5,9,2,
-343,344,Melee,Distant Planet,,,1,5,9,2,
+343,344,Melee,Distant Planet,,,1,5,9,2,#1 contender Special
 344,345,Melee,Distant Planet,,,1,5,9,2,
-345,346,Melee,Distant Planet,,,1,5,9,2,
-346,347,Brawl,Smashville,,,12,5,9,3,Y
+345,346,Melee,Distant Planet,,,1,5,9,2,#1 contender Melee
+346,347,Brawl,Smashville,,,12,5,9,3,#1 Contender Tag
 347,348,Brawl,Smashville,,,1,5,9,3,
 348,349,Brawl,Smashville,,,1,5,9,3,
 349,350,Brawl,Smashville,,,1,5,9,3,
@@ -367,22 +367,22 @@
 365,366,Brawl,75 M,,,1,5,10,1,
 366,367,Brawl,75 M,,,1,5,10,1,
 367,368,Brawl,75 M,,,1,5,10,1,
-368,369,Brawl,75 M,,,1,5,10,1,Y
+368,369,Brawl,75 M,,,1,5,10,1,#1 Contender Human
 369,370,Melee,Skyworld,,,1,5,10,1,
 370,371,Melee,Skyworld,,,1,5,10,1,
 371,372,Melee,Skyworld,,,1,5,10,1,
-372,373,Melee,Skyworld,,,12,5,10,1,
-373,374,Melee,Skyworld,,,1,5,10,1,
+372,373,Melee,Skyworld,,,12,5,10,1,#1 contender Tag
+373,374,Melee,Skyworld,,,1,5,10,1,#1 contender Animal
 374,375,Brawl,Mario Bros,,,1,5,10,2,
 375,376,Brawl,Mario Bros,,,1,5,10,2,
 376,377,Brawl,Mario Bros,,,1,5,10,2,
 377,378,Brawl,Mario Bros,,,1,5,10,2,
-378,379,Brawl,Mario Bros,,,1,5,10,2,Y
+378,379,Brawl,Mario Bros,,,1,5,10,2,#1 Contender Brawl
 379,380,Melee,Flatzone 2,,,1,5,10,2,
 380,381,Melee,Flatzone 2,,,1,5,10,2,
 381,382,Melee,Flatzone 2,,,1,5,10,2,
 382,383,Melee,Flatzone 2,,,1,5,10,2,
-383,384,Melee,Flatzone 2,,,1,5,10,2,
+383,384,Melee,Flatzone 2,,,1,5,10,2,#1 contender Melee
 384,385,Brawl,Pictochat,,,1,5,10,3,
 385,386,Brawl,Pictochat,,,1,5,10,3,
 386,387,Brawl,Pictochat,,,1,5,10,3,
@@ -404,17 +404,17 @@
 402,403,Brawl,Green Hill Zone,,,1,5,11,1,
 403,404,Brawl,Green Hill Zone,,,1,5,11,1,
 404,405,Brawl,Green Hill Zone,,,1,5,11,1,
-405,406,Brawl,Green Hill Zone,,,2,5,11,1,Y
+405,406,Brawl,Green Hill Zone,,,2,5,11,1,#1 Contender Hardcore
 406,407,Melee,Temple,,,1,5,11,1,
 407,408,Melee,Temple,,,1,5,11,1,
 408,409,Melee,Temple,,,1,5,11,1,
 409,410,Melee,Temple,,,1,5,11,1,
-410,411,Melee,Temple,,,1,5,11,1,
+410,411,Melee,Temple,,,1,5,11,1,#1 contender Animal
 411,412,Brawl,Yoshi's Island,,,1,5,11,2,
 412,413,Brawl,Yoshi's Island,,,1,5,11,2,
-413,414,Brawl,Yoshi's Island,,,12,5,11,2,Y
+413,414,Brawl,Yoshi's Island,,,12,5,11,2,#1 Contender Tag
 414,415,Brawl,Yoshi's Island,,,1,5,11,2,
-415,416,Brawl,Yoshi's Island,,,1,5,11,2,Y
+415,416,Brawl,Yoshi's Island,,,1,5,11,2,#1 Contender Human
 416,417,Melee,Jungle Japes,,,1,5,11,2,
 417,418,Melee,Jungle Japes,,,1,5,11,2,
 418,419,Melee,Jungle Japes,,,1,5,11,2,
@@ -424,7 +424,7 @@
 422,423,Brawl,Onett,,,1,5,11,3,
 423,424,Brawl,Onett,,,1,5,11,3,
 424,425,Brawl,Onett,,,1,5,11,3,
-425,426,Brawl,Onett,,,1,5,11,3,Y
+425,426,Brawl,Onett,,,1,5,11,3,#1 Contender Brawl
 426,427,Melee,Corneria,,,1,5,11,3,
 427,428,Melee,Corneria,,,1,5,11,3,
 428,429,Melee,Corneria,,,1,5,11,3,
@@ -461,11 +461,11 @@
 459,460,Brawl,Disrespect,,,1,5,12,3,
 460,461,Brawl,Disrespect,,,1,5,12,3,
 461,462,Brawl,Disrespect,,,1,5,12,3,
-462,463,Brawl,Disrespect,,,2,5,12,3,Y
+462,463,Brawl,Disrespect,,,2,5,12,3,#1 Contender Hardcore
 463,464,Melee,Risk,,,1,5,12,3,
 464,465,Melee,Risk,,,1,5,12,3,
-465,466,Melee,Risk,,,1,5,12,3,
-466,467,Melee,Risk,,,1,5,12,3,
+465,466,Melee,Risk,,,1,5,12,3,#1 contender Special
+466,467,Melee,Risk,,,1,5,12,3,#1 contender Animal
 467,468,Melee,Risk,,,1,5,12,3,
 468,469,,X5,Championship Scramble,Hardcore Championship,2,5,12,4,
 469,470,,X5,Championship Scramble,Special Championship,1,5,12,4,

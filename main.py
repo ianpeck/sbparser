@@ -2,9 +2,10 @@ from calendar import week
 from cmath import isnan
 import pandas as pd
 import math
+import re
 
 # Load the spreadsheet
-file_path = '/Users/ianjpeck/Downloads/FullSeason5.xlsx'
+file_path = r'C:\Users\19202\GitHub\sbparser\FullSeason5.xlsx'
 spreadsheet = pd.ExcelFile(file_path)
 season = 5
 
@@ -34,7 +35,6 @@ current_championship = None
 fight_counter = 0
 week_change_counter = 0
 for index, row in fight_rows.iterrows():
-    print(row)
     # -----------------------------------------
     # Check for brand or PPV names
     # -----------------------------------------
@@ -45,12 +45,12 @@ for index, row in fight_rows.iterrows():
     # -----------------------------------------
     # Check for Championship or # 1 contender matches
     # -----------------------------------------
-    if pd.notna(row[0]) and 'Championship' in str(row[0]):
+    if pd.notna(row[0]) and re.findall(r'^(?!.*\bspot\b).* championship$', str(row[0]).lower()):
         current_championship = row[0]
     else:
         current_championship = None
-    if pd.notna(row[0]) and '#1 Contender' in str(row[0]):
-        contender = 'Y'
+    if pd.notna(row[0]) and re.findall(r'^#1 contender \w+$', str(row[0]).lower()):
+        contender = row[0]
     else:
         contender = None
     # -----------------------------------------
@@ -114,4 +114,4 @@ fight_id_df = pd.DataFrame({
     '#1ContenderIndicator': contenders
 })
 
-fight_id_df.to_csv('/Users/ianjpeck/Documents/GitHub/sbparser/test.csv')
+fight_id_df.to_csv(r'C:\Users\19202\GitHub\sbparser\test.csv')
