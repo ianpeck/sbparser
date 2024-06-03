@@ -24,7 +24,7 @@ for index, row in fight_rows.iterrows():
         
         for fighter in fighters:
             fighter_name = fighter.split(' ')[0] 
-            decision = 'W' if '- W' in fighter else 'L'
+            decision = 'w' if '- W' in fighter else 'l'
             fighter_index = row[row == fighter].index[0]
             fighter_col_index = df.columns.get_loc(fighter_index)
             if index + 1 < len(df):
