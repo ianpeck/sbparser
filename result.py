@@ -3,7 +3,7 @@ import math
 import re
 
 # Load the spreadsheet
-file_path = r'/Users/ianjpeck/Downloads/Season5.xlsx'
+file_path = r'/Users/ianjpeck/Downloads/FullSeason5.xlsx'
 spreadsheet = pd.ExcelFile(file_path)
 result_id_start = 1
 
@@ -23,7 +23,7 @@ for index, row in fight_rows.iterrows():
         fighters = row.iloc[2:][row.iloc[2:].apply(lambda x: isinstance(x, str))].tolist()
         
         for fighter in fighters:
-            fighter_name = fighter.split(' ')[0] 
+            fighter_name = fighter.replace('- W','')
             decision = 'w' if '- W' in fighter else 'l'
             fighter_index = row[row == fighter].index[0]
             fighter_col_index = df.columns.get_loc(fighter_index)
