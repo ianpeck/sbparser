@@ -5,13 +5,13 @@ import re
 # Load the spreadsheet
 file_path = r'/Users/ianjpeck/Downloads/Season5.xlsx'
 spreadsheet = pd.ExcelFile(file_path)
+result_id_start = 1
 
 # Load the data from the first sheet
 df = pd.read_excel(file_path, sheet_name='Sheet1')
 
 # Extract relevant rows and reset the index for easier handling
 fight_rows = df
-result_id_start = 1
 
 results = []
 fight_counter = 0
