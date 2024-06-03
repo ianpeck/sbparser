@@ -45,7 +45,7 @@ for index, row in fight_rows.iterrows():
     # -----------------------------------------
     # Check for Championship or # 1 contender matches
     # -----------------------------------------
-    if pd.notna(row[0]) and re.findall(r'^(?!.*\bspot\b).* championship$', str(row[0]).lower()):
+    if pd.notna(row[0]) and re.findall(r'^(?!.*\b(spot|added)\b).* championship$', str(row[0]).lower()):
         current_championship = row[0]
     else:
         current_championship = None
