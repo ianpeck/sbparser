@@ -1,5 +1,3 @@
-from calendar import week
-from cmath import isnan
 import pandas as pd
 import math
 import re
@@ -49,7 +47,7 @@ for index, row in fight_rows.iterrows():
         current_championship = row[0]
     else:
         current_championship = None
-    if pd.notna(row[0]) and re.findall(r'^#1 contender \w+$', str(row[0]).lower()):
+    if pd.notna(row[0]) and (re.findall(r'^#1 contender \w+$', str(row[0]).lower())):
         contender = row[0]
     else:
         contender = None
