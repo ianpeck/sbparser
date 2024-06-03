@@ -3,7 +3,7 @@ import math
 import re
 
 # Load the spreadsheet
-file_path = r'C:\Users\19202\Downloads\Season5.xlsx'
+file_path = r'/Users/ianjpeck/Downloads/Season5.xlsx'
 spreadsheet = pd.ExcelFile(file_path)
 
 # Load the data from the first sheet
@@ -11,12 +11,27 @@ df = pd.read_excel(file_path, sheet_name='Sheet1')
 
 # Extract relevant rows and reset the index for easier handling
 fight_rows = df
+result_id_start = 1
 
+results = []
 fight_counter = 0
 for index, row in fight_rows.iterrows():
     if row.astype(str).str.contains('- W').any():
         fight_counter += 1
     # Find Fighters
     if str(row[1]).isdigit():
-        fighters = row.iloc[1:][row.apply(lambda x: isinstance(x, str))].tolist()
-        print(fighters)
+        fighters = row.iloc[2:][row.iloc[2:].apply(lambda x: isinstance(x, str))].tolist()
+        
+        for fighter in fighters:
+            fighter_name = fighter.split(' ')[0] 
+            decision = 'W' if '- W' in fighter else 'L'
+            fighter_index = row[row == fighter].index[0]
+            fighter_col_index = df.columns.get_loc(fighter_index)
+            if index + 1 < len(df):
+                value_below = df.iloc[index + 1, fighter_col_index]
+                results.append({'Result_ID': result_id_start,'Fight_ID': fight_counter, 'Fighter': fighter_name, 'Match_Result': value_below, 'Decision': decision, 'Seed': None, 'DefendingIndicator': None})
+                result_id_start += 1
+
+# Convert results to a DataFrame
+results_df = pd.DataFrame(results)
+results_df.to_csv('/Users/ianjpeck/Documents/GitHub/sbparser/result_test.csv', index=False)

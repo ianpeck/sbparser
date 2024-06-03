@@ -3,7 +3,7 @@ import math
 import re
 
 # Load the spreadsheet
-file_path = r'C:\Users\19202\GitHub\sbparser\FullSeason5.xlsx'
+file_path = r'/Users/ianjpeck/Downloads/Season5.xlsx'
 spreadsheet = pd.ExcelFile(file_path)
 season = 5
 
@@ -112,4 +112,4 @@ fight_id_df = pd.DataFrame({
     '#1ContenderIndicator': contenders
 })
 
-fight_id_df.to_csv(r'C:\Users\19202\GitHub\sbparser\test.csv')
+fight_id_df.to_csv(r'/Users/ianjpeck/Documents/GitHub/sbparser/fight_test.csv')

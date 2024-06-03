@@ -1,0 +1,39 @@
+,Fight_ID,Brand_ID,Location_ID,PPV_ID,Championship_ID,FightType_ID,Season_ID,Month,Week,#1ContenderIndicator
+0,1,Brawl,Battefield,,,1,5,1,1,
+1,2,Brawl,Battefield,,,1,5,1,1,
+2,3,Brawl,Battefield,,,1,5,1,1,
+3,4,Brawl,Battefield,,,1,5,1,1,
+4,5,Brawl,Battefield,,,1,5,1,1,#1 Contender Brawl
+5,6,Melee,Final Destination,,,1,5,1,1,#1 Contender Special
+6,7,Melee,Final Destination,,,1,5,1,1,
+7,8,Melee,Final Destination,,,1,5,1,1,
+8,9,Melee,Final Destination,,,1,5,1,1,
+9,10,Melee,Final Destination,,,1,5,1,1,
+10,11,Brawl,Delfino Plaza,,,1,5,1,2,
+11,12,Brawl,Delfino Plaza,,,1,5,1,2,
+12,13,Brawl,Delfino Plaza,,,1,5,1,2,
+13,14,Brawl,Delfino Plaza,,,1,5,1,2,
+14,15,Brawl,Delfino Plaza,,,1,5,1,2,
+15,16,Melee,Luigi's Mansion,,,1,5,1,2,
+16,17,Melee,Luigi's Mansion,,,1,5,1,2,
+17,18,Melee,Luigi's Mansion,,,1,5,1,2,
+18,19,Melee,Luigi's Mansion,,,12,5,1,2,#1 Contender Tag
+19,20,Melee,Luigi's Mansion,,,1,5,1,2,#1 Contender Animal
+20,21,Brawl,Mushroomy Kingdom,,,1,5,1,3,#1 Contender Human
+21,22,Brawl,Mushroomy Kingdom,,,1,5,1,3,
+22,23,Brawl,Mushroomy Kingdom,,,1,5,1,3,
+23,24,Brawl,Mushroomy Kingdom,,,1,5,1,3,
+24,25,Brawl,Mushroomy Kingdom,,,2,5,1,3,#1 Contender Hardcore
+25,26,Melee,Mario Circuit,,,1,5,1,3,
+26,27,Melee,Mario Circuit,,,1,5,1,3,
+27,28,Melee,Mario Circuit,,,1,5,1,3,
+28,29,Melee,Mario Circuit,,,1,5,1,3,
+29,30,Melee,Mario Circuit,,,1,5,1,3,#1 Contender Melee
+30,31,,Rumble Falls,Royal Rumble,Animal Championship,1,5,1,4,
+31,32,,Rumble Falls,Royal Rumble,Unified Tag Team Championship,12,5,1,4,
+32,33,,Rumble Falls,Royal Rumble,Human Championship,1,5,1,4,
+33,34,,Rumble Falls,Royal Rumble,Special Championship,1,5,1,4,
+34,35,,Rumble Falls,Royal Rumble,Hardcore Championship,2,5,1,4,
+35,36,,Rumble Falls,Royal Rumble,Melee Championship,1,5,1,4,
+36,37,,Rumble Falls,Royal Rumble,Brawl Championship,1,5,1,4,
+37,38,,Rumble Falls,Royal Rumble,,8,5,1,4,
