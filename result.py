@@ -23,14 +23,15 @@ for index, row in fight_rows.iterrows():
         fighters = row.iloc[2:][row.iloc[2:].apply(lambda x: isinstance(x, str))].tolist()
         
         for fighter in fighters:
-            fighter_name = fighter.replace('- W','')
-            decision = 'w' if '- W' in fighter else 'l'
-            fighter_index = row[row == fighter].index[0]
-            fighter_col_index = df.columns.get_loc(fighter_index)
-            if index + 1 < len(df):
-                value_below = df.iloc[index + 1, fighter_col_index]
-                results.append({'Result_ID': result_id_start,'Fight_ID': fight_counter, 'Fighter': fighter_name, 'Match_Result': value_below, 'Decision': decision, 'Seed': None, 'DefendingIndicator': None})
-                result_id_start += 1
+            if fighter not in ('Brawl', 'Melee'): # Remove Tournament Issues
+                fighter_name = fighter.replace('- W','')
+                decision = 'w' if '- W' in fighter else 'l'
+                fighter_index = row[row == fighter].index[0]
+                fighter_col_index = df.columns.get_loc(fighter_index)
+                if index + 1 < len(df):
+                    value_below = df.iloc[index + 1, fighter_col_index]
+                    results.append({'Result_ID': result_id_start,'Fight_ID': fight_counter, 'Fighter': fighter_name, 'Match_Result': value_below, 'Decision': decision, 'Seed': None, 'DefendingIndicator': None})
+                    result_id_start += 1
 
 # Convert results to a DataFrame
 results_df = pd.DataFrame(results)

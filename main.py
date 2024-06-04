@@ -3,9 +3,19 @@ import math
 import re
 
 # Load the spreadsheet
-file_path = r'/Users/ianjpeck/Downloads/FullSeason5.xlsx'
+file_path = r'/Users/ianjpeck/Documents/GitHub/sbparser/FullSeason5.xlsx'
 spreadsheet = pd.ExcelFile(file_path)
 season = 5
+# Load location file
+location_file_path = '/Users/ianjpeck/Documents/GitHub/sbparser/csv/Location_ID.csv'
+df_location = pd.read_csv(location_file_path)
+location_dict = dict(zip(df_location['Location_Name'].str.lower(), df_location['Location_ID']))
+# Load ppv file
+ppv_file_path = '/Users/ianjpeck/Documents/PPV.csv'
+df_ppv = pd.read_csv(ppv_file_path)
+ppv_dict = dict(zip(df_ppv['PPV_Name'].str.lower(), df_ppv['PPV_ID']))
+# Brand dict
+brand_dict = {'Brawl': 1, 'Melee': 2, 'Ultimate': 3}
 
 # Load the data from the first sheet
 df = pd.read_excel(file_path, sheet_name='Sheet1')
@@ -37,9 +47,9 @@ for index, row in fight_rows.iterrows():
     # Check for brand or PPV names
     # -----------------------------------------
     if pd.notna(row[1]) and pd.isna(row[0]) and not str(row[1]).isdigit():
-        current_brand = str(row[1]).strip() if str(row[1]).strip() in ['Ultimate', 'Melee', 'Brawl'] else None
-        current_ppv = str(row[1]).strip() if str(row[1]).strip() not in ['Ultimate', 'Melee', 'Brawl'] else None
-        current_location = row[2]  # Get the location from the right-adjacent cell
+        current_brand = brand_dict.get(str(row[1]).strip()) if str(row[1]).strip() in ['Ultimate', 'Melee', 'Brawl'] else None
+        current_ppv = ppv_dict.get(str(row[1]).strip().lower(), str(row[1]).strip()) if str(row[1]).strip() not in ['Ultimate', 'Melee', 'Brawl'] else None
+        current_location = location_dict.get(str(row[2]).lower(), row[2])  # Get the location from the right-adjacent cell
     # -----------------------------------------
     # Check for Championship or # 1 contender matches
     # -----------------------------------------

@@ -1,0 +1,120 @@
+Location_ID,Location_Name,Location_GameSeries,Location_Origin
+1,Battlefield,"Smash Bros.",Brawl
+2,"Final Destination","Smash Bros.",Brawl
+3,"Delfino Plaza","Super Mario",Brawl
+4,"Mushroomy Kingdom","Super Mario",Brawl
+5,"Figure-8 Circuit","Super Mario",Brawl
+6,"Rumble Falls","Donkey Kong",Brawl
+7,"Bridge of Eldin","Legend of Zelda",Brawl
+8,Norfair,Metroid,Brawl
+9,"Frigate Orpheon",Metroid,Brawl
+10,"Yoshi's Island (Brawl)","Super Mario",Brawl
+11,Halberd,Kirby,Brawl
+12,"Lylat Cruise","Star Fox",Brawl
+13,"Pokemon Stadium 2",Pokemon,Brawl
+14,"Port Town Aero Drive",F-Zero,Brawl
+15,"Castle Siege","Fire Emblem",Brawl
+16,"WarioWare, Inc.",WarioWare,Brawl
+17,"Distant Planet",Pikmin,Brawl
+18,Smashville,"Animal Crossing",Brawl
+19,"New Pork City",Mother,Brawl
+20,Summit,"Ice Climbers",Brawl
+21,Skyworld,"Kid Icarus",Brawl
+22,Pictochat,None,Brawl
+23,"Shadow Moses Island","Metal Gear",Brawl
+24,Temple,"Legend of Zelda",Melee
+25,"Yoshi's Island (Melee)","Super Mario",Melee
+26,Onett,Mother,Melee
+27,Corneria,"Star Fox",Melee
+28,"Rainbow Cruise","Super Mario",Melee
+29,Brinstar,Metroid,Melee
+30,"Luigi's Mansion","Super Mario",Brawl
+31,"Pirate Ship","Legend of Zelda",Brawl
+32,"Spear Pillar",Pokemon,Brawl
+33,75m,"Donkey Kong",Brawl
+34,"Mario Bros.","Super Mario",Brawl
+35,"Flat Zone 2","Game & Watch",Brawl
+36,Hanenbow,Electroplankton,Brawl
+37,"Green Hill Zone","Sonic the Hedgehog",Brawl
+38,"Jungle Japes","Donkey Kong",Melee
+39,"Green Greens",Kirby,Melee
+40,"Big Blue",F-Zero,Melee
+41,"Pokemon Stadium",Pokemon,Melee
+42,Disrespect,"Created Stage",Brawl
+43,Risk,"Created Stage",Brawl
+44,X5,"Created Stage",Brawl
+45,"Big Battlefield","Smash Bros.","Wii U"
+46,"Mushroom Kingdom U","Super Mario","Wii U"
+47,"Mario Galaxy","Super Mario","Wii U"
+48,"Mario Circuit","Super Mario","Wii U"
+49,"3D Land","Super Mario",3DS
+50,"New Donk City Hall","Super Mario",Ultimate
+51,"Mushroom Kingdom 2","Super Mario",Melee
+52,"Peach's Castle","Super Mario",64
+53,"Mushroom Kingdom","Super Mario",64
+54,"Super Mario Maker","Super Mario","Wii U"
+55,"Golden Plains","Super Mario",3DS
+56,"Kongo Falls","Donkey Kong",Melee
+57,"Kongo Jungle","Donkey Kong",64
+58,"Great Plateau Tower","The Legend of Zelda",Ultimate
+59,Skyloft,"The Legend of Zelda","Wii U"
+60,"Spirit Train","The Legend of Zelda",3DS
+61,"Great Bay","The Legend of Zelda",Melee
+62,"Hyrule Castle","The Legend of Zelda",64
+63,"Gerudo Valley","The Legend of Zelda",3DS
+64,"Brinstar Depths",Metroid,Melee
+65,"Yoshi's Story","Super Mario",Melee
+66,"Super Happy Tree","Super Mario",64
+67,"The Great Cave Offensive",Kirby,"Wii U"
+68,"Dream Land",Kirby,64
+69,"Fountain of Dreams",Kirby,Melee
+70,"Dream Land GB",Kirby,3DS
+71,Venom,"Star Fox",Melee
+72,"Prism Tower",Pokemon,3DS
+73,"Unova Pokemon League",Pokemon,3DS
+74,"Kalos Pokemon League",Pokemon,"Wii U"
+75,"Saffron City",Pokemon,64
+76,Fourside,Mother,Melee
+77,Magicant,Mother,3DS
+78,"Mute City SNES",F-Zero,3DS
+79,Coliseum,"Fire Emblem","Wii U"
+80,"Arena Ferox","Fire Emblem",3DS
+81,"Palutena's Temple","Kid Icarus","Wii U"
+82,"Reset Bomb Forest","Kid Icarus",3DS
+83,Gamer,WarioWare,"Wii U"
+84,"Garden of Hope",Pikmin,"Wii U"
+85,"Tortimer Island","Animal Crossing",3DS
+86,"Town and City","Animal Crossing","Wii U"
+87,"Wii Fit Studio","Wii Fit","Wii U"
+88,"Boxing Ring",Punch-Out!,"Wii U"
+89,"Find Mii",None,3DS
+90,"Tomodachi Life","Tomodachi Life",3DS
+91,"Gaur Plain",Xenoblade,"Wii U"
+92,"Duck Hunt","Duck Hunt","Wii U"
+93,"Umbra Clock Tower",Bayonetta,"Wii U"
+94,"Moray Towers",Splatoon,Ultimate
+95,"Living Room",Nintendogs,3DS
+96,Pilotwings,Pilotwings,"Wii U"
+97,"Wrecking Crew","Super Mario","Wii U"
+98,"Pictochat 2",None,3DS
+99,"Balloon Fight","Balloon Fight",3DS
+100,"Wuhu Island","Wii Fit","Wii U"
+101,"Suzaku Castle","Street Fighter","Wii U"
+102,Midgar,"Final Fantasy","Wii U"
+103,Pac-Land,Pac-Man,"Wii U"
+104,"Windy Hill Zone","Sonic the Hedgehog","Wii U"
+105,"Dracula's Castle",Castlevania,Ultimate
+106,Mementos,Persona,Ultimate
+107,"Princess Peach's Castle","Super Mario",Melee
+108,"Paper Mario","Super Mario",3DS
+109,"Wily Castle","Mega Man","Wii U"
+110,"Yggdrasil's Altar","Dragon Quest",Ultimate
+111,"Spiral Mountain",Banjo-Kazooie,Ultimate
+112,"King of Fighters Stadium","Fatal Fury",Ultimate
+113,"Garreg Mach Monastery","Fire Emblem",Ultimate
+114,"Spring Stadium",ARMS,Ultimate
+115,"Minecraft World",Minecraft,Ultimate
+116,"Northern Cave","Final Fantasy",Ultimate
+117,"Cloud Sea of Alrest",Xenoblade,Ultimate
+118,"Mishima Dojo",Tekken,Ultimate
+119,"Hollow Bastion","Kingdom Hearts",Ultimate
