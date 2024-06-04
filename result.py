@@ -23,7 +23,7 @@ for index, row in fight_rows.iterrows():
         fighters = row.iloc[2:][row.iloc[2:].apply(lambda x: isinstance(x, str))].tolist()
         
         for fighter in fighters:
-            if fighter not in ('Brawl', 'Melee'): # Remove Tournament Issues
+            if fighter not in ('Brawl', 'Melee', 'Ultimate'): # Remove Tournament Issues
                 fighter_name = fighter.replace('- W','')
                 decision = 'w' if '- W' in fighter else 'l'
                 fighter_index = row[row == fighter].index[0]
