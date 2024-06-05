@@ -16,6 +16,10 @@ df_ppv = pd.read_csv(ppv_file_path)
 ppv_dict = dict(zip(df_ppv['PPV_Name'].str.lower(), df_ppv['PPV_ID']))
 # Brand dict
 brand_dict = {'Brawl': 1, 'Melee': 2, 'Ultimate': 3}
+# Championship list
+champ_list = ['Brawl', 'Melee', 'Ultimate', 'Animal', 'Human', 'Monster', 'Hardcore', 'Special', 'Chaos', 
+              'Tag', 'Tag Team', 'Unified Tag']
+
 
 # Load the data from the first sheet
 df = pd.read_excel(file_path, sheet_name='Sheet1')
@@ -57,7 +61,10 @@ for index, row in fight_rows.iterrows():
         current_championship = row[0]
     else:
         current_championship = None
-    if pd.notna(row[0]) and (re.findall(r'^#1 contender \w+$', str(row[0]).lower())):
+
+    if pd.notna(row[0]) and re.findall(r'^#1 contender \w+$', str(row[0]).lower()):
+        contender = row[0]
+    elif pd.notna(row[0]) and re.findall(r'spot in (' + '|'.join(re.escape(ship.lower()) for ship in champ_list) + ')', str(row[0]).lower()):
         contender = row[0]
     else:
         contender = None
