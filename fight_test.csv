@@ -76,7 +76,7 @@ Fight_ID,Brand_ID,Location_ID,PPV_ID,Championship_ID,FightType_ID,Season_ID,Mont
 75,,13,2.0,Brawl Championship,1,5,2,4,
 76,,13,2.0,Melee Championship,1,5,2,4,
 77,,13,2.0,,1,5,2,4,
-78,1.0,12,,,1,5,3,1,Spot in Human championship
+78,1.0,12,,,1,5,3,1,
 79,1.0,12,,,1,5,3,1,
 80,1.0,12,,,1,5,3,1,
 81,1.0,12,,,1,5,3,1,
@@ -86,7 +86,7 @@ Fight_ID,Brand_ID,Location_ID,PPV_ID,Championship_ID,FightType_ID,Season_ID,Mont
 85,2.0,32,,,12,5,3,1,#1 contender Tag
 86,2.0,32,,,1,5,3,1,#1 contender Animal
 87,2.0,32,,,1,5,3,1,
-88,1.0,14,,,1,5,3,2,Spot in Human championship
+88,1.0,14,,,1,5,3,2,
 89,1.0,14,,,1,5,3,2,
 90,1.0,14,,,1,5,3,2,
 91,1.0,14,,,1,5,3,2,
@@ -316,8 +316,8 @@ Fight_ID,Brand_ID,Location_ID,PPV_ID,Championship_ID,FightType_ID,Season_ID,Mont
 315,2.0,12,,,12,5,8,3,#1 Contender Tag
 316,2.0,12,,,1,5,8,3,
 317,2.0,12,,,1,5,8,3,
-318,2.0,12,,,1,5,8,3,Ike earns spot in Melee after performance
-319,2.0,12,,,1,5,8,3,Spot in Special If Mario wins
+318,2.0,12,,,1,5,8,3,
+319,2.0,12,,,1,5,8,3,
 320,,14,8.0,Unified Tag Team Championship,12,5,8,4,
 321,,14,8.0,Human Championship,1,5,8,4,
 322,,14,8.0,Special Championship,1,5,8,4,

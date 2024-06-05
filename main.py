@@ -64,7 +64,7 @@ for index, row in fight_rows.iterrows():
 
     if pd.notna(row[0]) and re.findall(r'^#1 contender \w+$', str(row[0]).lower()):
         contender = row[0]
-    elif pd.notna(row[0]) and re.findall(r'spot in (' + '|'.join(re.escape(ship.lower()) for ship in champ_list) + ')', str(row[0]).lower()):
+    elif pd.notna(row[0]) and re.findall(r'^spot in (' + '|'.join(re.escape(ship.lower()) for ship in champ_list) + r')$', str(row[0]).lower()):
         contender = row[0]
     else:
         contender = None
