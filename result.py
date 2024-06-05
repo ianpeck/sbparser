@@ -21,6 +21,7 @@ for index, row in fight_rows.iterrows():
     # Find Fighters
     if str(row[1]).isdigit():
         fighters = row.iloc[2:][row.iloc[2:].apply(lambda x: isinstance(x, str))].tolist()
+        print(row)
         
         for fighter in fighters:
             if fighter not in ('Brawl', 'Melee', 'Ultimate'): # Remove Tournament Issues
@@ -28,9 +29,19 @@ for index, row in fight_rows.iterrows():
                 decision = 'w' if '- W' in fighter else 'l'
                 fighter_index = row[row == fighter].index[0]
                 fighter_col_index = df.columns.get_loc(fighter_index)
+                if row.astype(str).str.contains('vs.').any():
+                    seed_string = df.iloc[index, 0]
+                    if fighter_col_index == 2:
+                        seed = seed_string.split()[0]
+                    elif fighter_col_index == 3:
+                        seed = seed_string.split()[2]
+                else:
+                    seed = None
+                print(row)
+                print(seed)
                 if index + 1 < len(df):
                     value_below = df.iloc[index + 1, fighter_col_index]
-                    results.append({'Result_ID': result_id_start,'Fight_ID': fight_counter, 'Fighter': fighter_name, 'Match_Result': value_below, 'Decision': decision, 'Seed': None, 'DefendingIndicator': None})
+                    results.append({'Result_ID': result_id_start,'Fight_ID': fight_counter, 'Fighter': fighter_name, 'Match_Result': value_below, 'Decision': decision, 'Seed': seed, 'DefendingIndicator': None})
                     result_id_start += 1
 
 # Convert results to a DataFrame
