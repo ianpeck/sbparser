@@ -3,7 +3,7 @@ import math
 import re
 
 # Load the spreadsheet
-file_path = r'/Users/ianjpeck/Downloads/FullSeason5.xlsx'
+file_path = r'/Users/ianjpeck/Documents/GitHub/sbparser/FullSeason5.xlsx'
 spreadsheet = pd.ExcelFile(file_path)
 result_id_start = 1
 
@@ -24,7 +24,7 @@ for index, row in fight_rows.iterrows():
         
         for fighter in fighters:
             if fighter not in ('Brawl', 'Melee', 'Ultimate'): # Remove Tournament Issues
-                fighter_name = fighter.replace('- W','')
+                fighter_name = fighter.replace('- W','').replace('(PL)','').strip()
                 decision = 'w' if '- W' in fighter else 'l'
                 fighter_index = row[row == fighter].index[0]
                 fighter_col_index = df.columns.get_loc(fighter_index)
