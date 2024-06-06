@@ -62,21 +62,21 @@ Result_ID,Fight_ID,Fighter,Match_Result,Decision,Seed,DefendingIndicator
 61,29,Luigi,1,w,,
 62,30,Ike,0,l,,
 63,30,Kirby,2,w,,
-64,31,Pikachu,2,w,,
+64,31,Pikachu,2,w,,Y
 65,31,Captain Falcon,0,l,,
-66,32,Toon Link,1,w,,
+66,32,Toon Link,1,w,,Y
 67,32,Zelda,0,w,,
 68,32,Ganandorf,0,l,,
 69,32,Link,0,l,,
-70,33,Diddy Kong,1,w,,
+70,33,Diddy Kong,1,w,,Y
 71,33,Ice Climbers,0,l,,
-72,34,Pokemon Trainer,7,l,,
+72,34,Pokemon Trainer,7,l,,Y
 73,34,Mr. Game & Watch,37,w,,
-74,35,Sonic,1,w,,
+74,35,Sonic,1,w,,Y
 75,35,Lucas,-1,l,,
-76,36,Mario,1,w,,
+76,36,Mario,1,w,,Y
 77,36,Kirby,0,l,,
-78,37,Diddy Kong,1,w,,
+78,37,Diddy Kong,1,w,,Y
 79,37,Wario,0,l,,
 80,38,Lucario,0,l,,
 81,38,Fox,0,l,,
@@ -129,7 +129,7 @@ Result_ID,Fight_ID,Fighter,Match_Result,Decision,Seed,DefendingIndicator
 128,59,Ness,0,l,,
 129,60,Fox,-1,l,,
 130,60,Marth,1,w,,
-131,61,Diddy Kong,1,w,,
+131,61,Diddy Kong,1,w,,Y
 132,61,ROB,0,l,,
 133,62,Toon Link,3,w,,
 134,62,Ice Climbers,0,l,,
@@ -145,27 +145,27 @@ Result_ID,Fight_ID,Fighter,Match_Result,Decision,Seed,DefendingIndicator
 144,67,Mr. Game & Watch,1,w,,
 145,68,Kirby,1,w,,
 146,68,Link,0,l,,
-147,69,Sonic,-1,l,,
+147,69,Sonic,-1,l,,Y
 148,69,Marth,1,w,,
-149,70,Toon Link,1,w,,
+149,70,Toon Link,1,w,,Y
 150,70,Zelda,2,w,,
 151,70,Snake,0,l,,
 152,70,Wolf,0,l,,
-153,71,Pikachu,0,l,,
+153,71,Pikachu,0,l,,Y
 154,71,Pit,2,w,,
-155,72,Diddy Kong,3,w,,
+155,72,Diddy Kong,3,w,,Y
 156,72,DK,0,l,,
-157,73,Mr. Game & Watch,0,l,,
+157,73,Mr. Game & Watch,0,l,,Y
 158,73,Yoshi,175 HP,w,,
 159,74,Meta Knight,0,l,,
 160,74,Pokemon Trainer,0,l,,
 161,74,Toon Link,0,l,,
 162,74,Wario,1,w,,
-163,75,Diddy Kong,1,w,,
+163,75,Diddy Kong,1,w,,Y
 164,75,Lucas,0,l,,
-165,76,Mario,0,l,,
+165,76,Mario,0,l,,Y
 166,76,Kirby,1,w,,
-167,77,Kirby,0,l,,
+167,77,Kirby,0,l,,Y
 168,77,Meta Knight,1,w,,
 169,78,ROB,1,w,,
 170,78,Snake,0,l,,
@@ -231,21 +231,21 @@ Result_ID,Fight_ID,Fighter,Match_Result,Decision,Seed,DefendingIndicator
 230,106,Pikachu,1,w,,
 231,107,Kirby,1,w,,
 232,107,Mario,0,l,,
-233,108,ROB,1,w,,
+233,108,ROB,1,w,,Y
 234,108,Wolf,0,l,,
-235,109,Pit,1,w,,
+235,109,Pit,1,w,,Y
 236,109,Link,0,l,,
-237,110,Toon Link,0,l,,
+237,110,Toon Link,0,l,,Y
 238,110,Zelda,0,l,,
 239,110,Ike,2,w,,
 240,110,Pikachu,2,w,,
-241,111,Yoshi,196,w,,
+241,111,Yoshi,196,w,,Y
 242,111,Falco,32,l,,
-243,112,Marth,-1,l,,
+243,112,Marth,-1,l,,Y
 244,112,DK,1,w,,
-245,113,Diddy Kong,4,w,,
+245,113,Diddy Kong,4,w,,Y
 246,113,Toon Link,0,l,,
-247,114,Meta Knight,0,l,,
+247,114,Meta Knight,0,l,,Y
 248,114,Luigi,1,w,,
 249,115,Lucario,0,l,,
 250,115,Mr. Game & Watch,0,l,,
@@ -315,17 +315,17 @@ Result_ID,Fight_ID,Fighter,Match_Result,Decision,Seed,DefendingIndicator
 314,144,Link,0,l,,
 315,145,Mr. Game & Watch,2,w,,
 316,145,Captain Falcon,0,l,,
-317,146,Yoshi,86,w,,
+317,146,Yoshi,86,w,,Y
 318,146,King Dedede,68,l,,
-319,147,ROB,2,w,,
+319,147,ROB,2,w,,Y
 320,147,Peach,0,l,,
-321,148,Pikachu,2,w,,
+321,148,Pikachu,2,w,,Y
 322,148,Ike,1,w,,
 323,148,Lucas,0,l,,
 324,148,Ness,0,l,,
-325,149,Pit,1,w,,
+325,149,Pit,1,w,,Y
 326,149,Pikachu,0,l,,
-327,150,DK,2,w,,
+327,150,DK,2,w,,Y
 328,150,Wolf,-2,l,,
 329,151,Captain Falcon,0,l,,
 330,151,Mario,2,w,,
@@ -335,9 +335,9 @@ Result_ID,Fight_ID,Fighter,Match_Result,Decision,Seed,DefendingIndicator
 334,152,Sonic,1,l,,
 335,152,Marth,2,w,,
 336,152,ROB,1,l,,
-337,153,Luigi,2,w,,
+337,153,Luigi,2,w,,Y
 338,153,Mr. Game & Watch,0,l,,
-339,154,Diddy Kong,0,l,,
+339,154,Diddy Kong,0,l,,Y
 340,154,Toon Link,2,w,,
 341,155,Snake,1,w,,
 342,155,Ice Climbers,0,l,,
@@ -404,25 +404,25 @@ Result_ID,Fight_ID,Fighter,Match_Result,Decision,Seed,DefendingIndicator
 403,183,Pokemon Trainer,0,l,,
 404,184,Mario,1,w,,
 405,184,Captain Falcon,0,l,,
-406,185,Pikachu,2,w,,
+406,185,Pikachu,2,w,,Y
 407,185,Ike,2,w,,
 408,185,Fox,0,l,,
 409,185,Falco,0,l,,
-410,186,DK,-1,l,,
+410,186,DK,-1,l,,Y
 411,186,Sonic,2,w,,
 412,186,Wario,-1,l,,
-413,187,Yoshi,2,w,,
+413,187,Yoshi,2,w,,Y
 414,187,Olimar,0,l,,
-415,188,ROB,1,w,,
+415,188,ROB,1,w,,Y
 416,188,Ness,0,l,,
-417,189,Pit,0,l,,
+417,189,Pit,0,l,,Y
 418,189,Captain Falcon,0,l,,
 419,189,Mario,1,w,,
-420,190,Toon Link,3,w,,
+420,190,Toon Link,3,w,,Y
 421,190,Diddy Kong,0,l,,
-422,191,Luigi,2,w,,
+422,191,Luigi,2,w,,Y
 423,191,Ike,0,l,,
-424,192,Luigi,1,w,,
+424,192,Luigi,1,w,,Y
 425,192,Mario,0,l,,
 426,193,Pokemon Trainer,0,l,,
 427,193,Jigglypuff,2,w,,
@@ -486,21 +486,21 @@ Result_ID,Fight_ID,Fighter,Match_Result,Decision,Seed,DefendingIndicator
 485,221,Fox,1,w,,
 486,222,Mario,0,l,,
 487,222,Wario,2,w,,
-488,223,Mario,1,w,,
+488,223,Mario,1,w,,Y
 489,223,Link,0,l,,
-490,224,ROB,1,w,,
+490,224,ROB,1,w,,Y
 491,224,Bowser,0,l,,
-492,225,Yoshi,2,w,,
+492,225,Yoshi,2,w,,Y
 493,225,Fox,0,l,,
-494,226,Sonic,1,w,,
+494,226,Sonic,1,w,,Y
 495,226,Pikachu,-1,l,,
-496,227,Ike,1,w,,
+496,227,Ike,1,w,,Y
 497,227,Pikachu,0,w,,
 498,227,Ness,0,l,,
 499,227,Lucas,0,l,,
-500,228,Toon Link,1,w,,
+500,228,Toon Link,1,w,,Y
 501,228,Diddy Kong,0,l,,
-502,229,Luigi,1,w,,
+502,229,Luigi,1,w,,Y
 503,229,Mario,0,l,,
 504,230,Peach,2,w,,
 505,230,Bowser,0,l,,
@@ -593,7 +593,7 @@ Result_ID,Fight_ID,Fighter,Match_Result,Decision,Seed,DefendingIndicator
 592,272,Kirby,1,w,5,
 593,273,Marth,0,l,7,
 594,273,Pikachu,1,w,6,
-595,274,Kirby,1,w,5,
+595,274,Kirby,1,w,5,Y
 596,274,Pikachu,0,l,6,
 597,275,Luigi,1,w,1,
 598,275,King Dedede,0,l,16,
@@ -623,7 +623,7 @@ Result_ID,Fight_ID,Fighter,Match_Result,Decision,Seed,DefendingIndicator
 622,287,Ike,1,w,5,
 623,288,Mario,1,w,2,
 624,288,Pit,0,l,6,
-625,289,Ike,0,l,5,
+625,289,Ike,0,l,5,Y
 626,289,Mario,1,w,2,
 627,290,Toon Link,2,w,,
 628,290,Bowser,0,l,,
@@ -688,27 +688,27 @@ Result_ID,Fight_ID,Fighter,Match_Result,Decision,Seed,DefendingIndicator
 687,319,Mario,0,l,,
 688,319,Ganondorf,3,w,,
 689,319,Lucario,0,l,,
-690,320,Pikachu,2,w,,
+690,320,Pikachu,2,w,,Y
 691,320,Ike,2,w,,
 692,320,Fox,0,l,,
 693,320,Falco,0,l,,
-694,321,ROB,2,w,,
+694,321,ROB,2,w,,Y
 695,321,Bowser,0,l,,
 696,321,Snake,0,l,,
-697,322,Yoshi,1,w,,
+697,322,Yoshi,1,w,,Y
 698,322,Ganondorf,0,l,,
 699,322,Lucario,0,l,,
-700,323,Sonic,4,w,,
+700,323,Sonic,4,w,,Y
 701,323,Pikachu,0,l,,
 702,323,Samus,-3,l,,
 703,323,Diddy Kong,-1,l,,
-704,324,Mario,1,w,,
+704,324,Mario,1,w,,Y
 705,324,Wario,0,l,,
 706,324,Meta Knight,0,l,,
-707,325,Kirby,0,l,,
+707,325,Kirby,0,l,,Y
 708,325,Toon Link,1,w,,
 709,325,Ness,0,l,,
-710,326,Mario,0,l,,
+710,326,Mario,0,l,,Y
 711,326,Luigi,0,l,,
 712,326,Pit,1,w,,
 713,326,Ike,0,l,,
@@ -774,23 +774,23 @@ Result_ID,Fight_ID,Fighter,Match_Result,Decision,Seed,DefendingIndicator
 773,355,Yoshi,2,w,,
 774,356,Link,0,l,,
 775,356,Ike,1,w,,
-776,357,Mario,0,l,,
+776,357,Mario,0,l,,Y
 777,357,Wario,1,w,,
-778,358,Sonic,1,w,,
+778,358,Sonic,1,w,,Y
 779,358,Samus,-1,l,,
-780,359,Yoshi,182,w,,
+780,359,Yoshi,182,w,,Y
 781,359,Olimar,23,l,,
-782,360,ROB,2,w,,
+782,360,ROB,2,w,,Y
 783,360,Snake,0,l,,
-784,361,Pikachu,2,w,,
+784,361,Pikachu,2,w,,Y
 785,361,Ike,2,w,,
 786,361,Wolf,0,l,,
 787,361,Bowser,0,l,,
-788,362,Pit,1,w,,
+788,362,Pit,1,w,,Y
 789,362,Mario,0,l,,
-790,363,Toon Link,1,w,,
+790,363,Toon Link,1,w,,Y
 791,363,Pikachu,0,l,,
-792,364,Marth,1,w,,
+792,364,Marth,1,w,,Y
 793,364,Toon Link,0,l,,
 794,365,Marth,2,w,,
 795,365,Snake,0,l,,
@@ -854,21 +854,21 @@ Result_ID,Fight_ID,Fighter,Match_Result,Decision,Seed,DefendingIndicator
 853,393,Meta Knight,1,w,,
 854,394,Wario,1,w,,
 855,394,Mario,0,l,,
-856,395,Sonic,0,l,,
+856,395,Sonic,0,l,,Y
 857,395,Samus,0,w,,
-858,396,Wario,2,w,,
+858,396,Wario,2,w,,Y
 859,396,DK,0,l,,
-860,397,ROB,0,l,,
+860,397,ROB,0,l,,Y
 861,397,Falco,2,w,,
-862,398,Yoshi,2,w,,
+862,398,Yoshi,2,w,,Y
 863,398,Ganondorf,0,l,,
-864,399,Pikachu,3,w,,
+864,399,Pikachu,3,w,,Y
 865,399,Ike,2,w,,
 866,399,Lucario,0,l,,
 867,399,Pit,0,l,,
-868,400,Marth,-3,l,,
+868,400,Marth,-3,l,,Y
 869,400,Toon Link,3,w,,
-870,401,Pit,0,l,,
+870,401,Pit,0,l,,Y
 871,401,Mario,2,w,,
 872,401,Luigi,0,l,,
 873,402,Toon Link,2,w,,
@@ -935,21 +935,21 @@ Result_ID,Fight_ID,Fighter,Match_Result,Decision,Seed,DefendingIndicator
 934,430,Ike,0,l,,
 935,431,Mario,0,l,,
 936,431,Luigi,1,w,,
-937,432,Wario,1,w,,
+937,432,Wario,1,w,,Y
 938,432,Link,0,l,,
-939,433,Falco,2,w,,
+939,433,Falco,2,w,,Y
 940,433,ROB,0,l,,
-941,434,Yoshi,52,l,,
+941,434,Yoshi,52,l,,Y
 942,434,Olimar,55,w,,
 943,435,Samus,2,w,,
 944,435,Wolf,-2,l,,
-945,436,Ike,1,w,,
+945,436,Ike,1,w,,Y
 946,436,Pikachu,2,w,,
 947,436,Wolf,0,l,,
 948,436,Bowser,0,l,,
-949,437,Mario,0,l,,
+949,437,Mario,0,l,,Y
 950,437,Pit,1,w,,
-951,438,Toon Link,2,w,,
+951,438,Toon Link,2,w,,Y
 952,438,Pikachu,0,l,,
 953,439,Bowser,0,l,,
 954,439,Snake,1,w,,
@@ -1013,32 +1013,32 @@ Result_ID,Fight_ID,Fighter,Match_Result,Decision,Seed,DefendingIndicator
 1012,467,Meta Knight,0,l,,
 1013,468,Luigi,1,w,,
 1014,468,DK,0,l,,
-1015,469,Samus,-1,l,,
+1015,469,Samus,-1,l,,Y
 1016,469,Kirby,1,w,,
-1017,470,Olimar,1,w,,
+1017,470,Olimar,1,w,,Y
 1018,470,Lucario,0,l,,
-1019,471,Falco,0,l,,
+1019,471,Falco,0,l,,Y
 1020,471,Marth,1,w,,
 1021,471,Captain Falcon,0,l,,
-1022,472,Wario,2,w,,
+1022,472,Wario,2,w,,Y
 1023,472,Mario,0,l,,
-1024,473,Ike,2,w,,
+1024,473,Ike,2,w,,Y
 1025,473,Pikachu,3,w,,
 1026,473,Ice Climbers,0,l,,
 1027,473,Zelda,0,l,,
-1028,474,ROB,1,w,,
-1029,474,Sonic,0,l,,
-1030,475,ROB,0,l,,
-1031,475,Toon Link,1,w,,
-1032,476,Toon Link,0,l,,
-1033,476,Pikachu,1,w,,
-1034,477,Pikachu,0,l,,
-1035,477,Diddy Kong,1,w,,
-1036,478,Yoshi,0,l,,
-1037,478,Mr. Game & Watch,1,w,,
-1038,479,Mr. Game & Watch,1,w,,
-1039,479,Luigi,0,l,,
-1040,480,Mr. Game & Watch,0,l,,
-1041,480,Pit,1,w,,
-1042,481,Pit,1,w,,
-1043,481,Fox,0,l,,
+1028,474,ROB,1,w,1,
+1029,474,Sonic,0,l,1,
+1030,475,ROB,0,l,1,
+1031,475,Toon Link,1,w,2,
+1032,476,Toon Link,0,l,2,
+1033,476,Pikachu,1,w,3,
+1034,477,Pikachu,0,l,3,Y
+1035,477,Diddy Kong,1,w,4,
+1036,478,Yoshi,0,l,1,
+1037,478,Mr. Game & Watch,1,w,1,
+1038,479,Mr. Game & Watch,1,w,1,
+1039,479,Luigi,0,l,2,
+1040,480,Mr. Game & Watch,0,l,1,
+1041,480,Pit,1,w,3,
+1042,481,Pit,1,w,3,Y
+1043,481,Fox,0,l,4,

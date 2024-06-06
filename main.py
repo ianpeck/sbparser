@@ -17,8 +17,7 @@ ppv_dict = dict(zip(df_ppv['PPV_Name'].str.lower(), df_ppv['PPV_ID']))
 # Brand dict
 brand_dict = {'Brawl': 1, 'Melee': 2, 'Ultimate': 3}
 # Championship list
-champ_list = ['Brawl', 'Melee', 'Ultimate', 'Animal', 'Human', 'Monster', 'Hardcore', 'Special', 'Chaos', 
-              'Tag', 'Tag Team', 'Unified Tag']
+champ_list = ['Brawl', 'Melee', 'Ultimate', 'Animal', 'Human', 'Monster', 'Hardcore', 'Special', 'Chaos', 'Tag', 'Tag Team', 'Unified Tag', 'Smash Bros.']
 
 
 # Load the data from the first sheet

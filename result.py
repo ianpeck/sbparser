@@ -21,7 +21,6 @@ for index, row in fight_rows.iterrows():
     # Find Fighters
     if str(row[1]).isdigit():
         fighters = row.iloc[2:][row.iloc[2:].apply(lambda x: isinstance(x, str))].tolist()
-        print(row)
         
         for fighter in fighters:
             if fighter not in ('Brawl', 'Melee', 'Ultimate'): # Remove Tournament Issues
@@ -37,11 +36,16 @@ for index, row in fight_rows.iterrows():
                         seed = seed_string.split()[2]
                 else:
                     seed = None
-                print(row)
-                print(seed)
+                if pd.notna(row[0]) and re.findall(r'^(?!.*\b(spot|added)\b).* championship$', str(row[0]).lower()):
+                    if fighter_col_index == 2:
+                        defending = 'Y'
+                    else:
+                        defending = None
+                else:
+                    defending = None
                 if index + 1 < len(df):
                     value_below = df.iloc[index + 1, fighter_col_index]
-                    results.append({'Result_ID': result_id_start,'Fight_ID': fight_counter, 'Fighter': fighter_name, 'Match_Result': value_below, 'Decision': decision, 'Seed': seed, 'DefendingIndicator': None})
+                    results.append({'Result_ID': result_id_start,'Fight_ID': fight_counter, 'Fighter': fighter_name, 'Match_Result': value_below, 'Decision': decision, 'Seed': seed, 'DefendingIndicator': defending})
                     result_id_start += 1
 
 # Convert results to a DataFrame

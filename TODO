@@ -1,9 +1,11 @@
-- Continue to eliminate typos from Excel/reformat
+- Continue to eliminate typos from Excel/reformat (All Seasons)
 X refine "Spot in" logic regex for #1 contender (to catch Port Town Aero Drive but not others)
-- Fight types automation?
-- Defending Automation?
+X Defending Automation?
+- Manual Change Defending for Scramble
+- Remove Seed info from Scramble Championship Row
+X Seed add for Scramble
 X Seed 
 X cash ins 
 X and other strings that trigger a championship
-- QA Season 5 + fill in manual columns that are remaining
+- QA Season 5 + fill in manual columns that are remaining (focusing on Fight_Type)
 - Do the same for Season 6 & 7
