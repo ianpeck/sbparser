@@ -2,8 +2,8 @@
 X refine "Spot in" logic regex for #1 contender (to catch Port Town Aero Drive but not others)
 X Defending Automation?
 - Manual Change Defending for Scramble
-- Remove Seed info from Scramble Championship Row
-- Championship ID CSV
+X Remove Seed info from Scramble Championship Row
+- Championship ID CSV eventually to automatically catch id
 - Beat the clock checks for season 6, compare to other seasons on how to handle
 X Seed add for Scramble
 X Seed 
