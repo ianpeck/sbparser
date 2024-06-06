@@ -51,10 +51,10 @@ for index, row in fight_rows.iterrows():
     # -----------------------------------------
     if pd.notna(row[1]) and pd.isna(row[0]) and not str(row[1]).isdigit():
         current_brand = brand_dict.get(str(row[1]).strip()) if str(row[1]).strip() in ['Ultimate', 'Melee', 'Brawl'] else None
-        current_ppv = ppv_dict.get(str(row[1]).strip().lower(), str(row[1]).strip()) if str(row[1]).strip() not in ['Ultimate', 'Melee', 'Brawl'] else None
-        # current_ppv = str(row[1]).strip() # test
-        current_location = location_dict.get(str(row[2]).lower(), row[2])  # Get the location from the right-adjacent cell
-        # current_location = str(row[2]).strip() # test
+        # current_ppv = ppv_dict.get(str(row[1]).strip().lower(), str(row[1]).strip()) if str(row[1]).strip() not in ['Ultimate', 'Melee', 'Brawl'] else None
+        current_ppv = str(row[1]).strip() if str(row[1]).strip() not in ['Ultimate', 'Melee', 'Brawl'] else None # test
+        # current_location = location_dict.get(str(row[2]).lower(), row[2])  # Get the location from the right-adjacent cell
+        current_location = str(row[2]).strip() # test
     # -----------------------------------------
     # Check for Championship or # 1 contender matches
     # -----------------------------------------
