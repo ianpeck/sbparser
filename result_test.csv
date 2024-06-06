@@ -941,7 +941,7 @@ Result_ID,Fight_ID,Fighter,Match_Result,Decision,Seed,DefendingIndicator
 940,433,ROB,0,l,,
 941,434,Yoshi,52,l,,Y
 942,434,Olimar,55,w,,
-943,435,Samus,2,w,,
+943,435,Samus,2,w,,Y
 944,435,Wolf,-2,l,,
 945,436,Ike,1,w,,Y
 946,436,Pikachu,2,w,,
