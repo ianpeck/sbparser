@@ -5,7 +5,7 @@ import re
 # Load the spreadsheet
 file_path = r'/Users/ianjpeck/Documents/GitHub/sbparser/FullSeason5.xlsx'
 spreadsheet = pd.ExcelFile(file_path)
-result_id_start = 1
+result_id_start = 4323 # Season 5
 
 # Load the data from the first sheet
 df = pd.read_excel(file_path, sheet_name='Sheet1')
@@ -14,7 +14,7 @@ df = pd.read_excel(file_path, sheet_name='Sheet1')
 fight_rows = df
 
 results = []
-fight_counter = 0
+fight_counter = 1910 # Season 5
 for index, row in fight_rows.iterrows():
     if row.astype(str).str.contains('- W').any():
         fight_counter += 1 # increment to next fight each time a - W is seen in a row (confirmed there are no issues with this)
@@ -52,7 +52,7 @@ for index, row in fight_rows.iterrows():
                     defending = None
                 if index + 1 < len(df):
                     value_below = str(df.iloc[index + 1, fighter_col_index]).replace('HP','').strip() # grab result which is below fighter name cell
-                    results.append({'Result_ID': result_id_start,'Fight_ID': fight_counter, 'Fighter': fighter_name, 'Match_Result': value_below, 'Decision': decision, 'Seed': seed, 'DefendingIndicator': defending})
+                    results.append({'Result_ID': result_id_start, 'Fighter_Name': fighter_name, 'Fight_ID': fight_counter, 'Decision': decision, 'Match_Result': value_below, 'Seed': seed, 'DefendingIndicator': defending})
                     result_id_start += 1
 
 # Convert results to a DataFrame
