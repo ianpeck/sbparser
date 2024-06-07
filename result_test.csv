@@ -565,7 +565,7 @@ Result_ID,Fight_ID,Fighter,Match_Result,Decision,Seed,DefendingIndicator
 564,258,Ike,1,w,,
 565,259,Yoshi,0,l,,
 566,259,Mr. Game & Watch,3,w,,
-567,260,Toon Link,0,l,1,
+567,260,Toon Link,0,l,1,Y
 568,260,Bowser,1,w,16,
 569,261,Diddy Kong,1,w,2,
 570,261,Peach,0,l,15,
@@ -595,7 +595,7 @@ Result_ID,Fight_ID,Fighter,Match_Result,Decision,Seed,DefendingIndicator
 594,273,Pikachu,1,w,6,
 595,274,Kirby,1,w,5,Y
 596,274,Pikachu,0,l,6,
-597,275,Luigi,1,w,1,
+597,275,Luigi,1,w,1,Y
 598,275,King Dedede,0,l,16,
 599,276,Mario,1,w,2,
 600,276,Ice Climbers,0,l,15,
@@ -611,7 +611,7 @@ Result_ID,Fight_ID,Fighter,Match_Result,Decision,Seed,DefendingIndicator
 610,281,Fox,1,w,10,
 611,282,DK,0,l,8,
 612,282,Link,1,w,9,
-613,283,Luigi,1,w,1,
+613,283,Luigi,1,w,1,Y
 614,283,Link,0,l,9,
 615,284,Meta Knight,0,l,13,
 616,284,Ike,1,w,5,
@@ -619,7 +619,7 @@ Result_ID,Fight_ID,Fighter,Match_Result,Decision,Seed,DefendingIndicator
 618,285,Pit,1,w,6,
 619,286,Mario,1,w,2,
 620,286,Fox,0,l,10,
-621,287,Luigi,0,l,1,
+621,287,Luigi,0,l,1,Y
 622,287,Ike,1,w,5,
 623,288,Mario,1,w,2,
 624,288,Pit,0,l,6,
@@ -1029,8 +1029,8 @@ Result_ID,Fight_ID,Fighter,Match_Result,Decision,Seed,DefendingIndicator
 1028,474,ROB,1,w,1,
 1029,474,Sonic,0,l,1,
 1030,475,ROB,0,l,1,
-1031,475,Toon Link,1,w,2,
-1032,476,Toon Link,0,l,2,
+1031,475,Toon Link,1,w,2,Y
+1032,476,Toon Link,0,l,2,Y
 1033,476,Pikachu,1,w,3,
 1034,477,Pikachu,0,l,3,Y
 1035,477,Diddy Kong,1,w,4,
