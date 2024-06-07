@@ -41,10 +41,10 @@ for index, row in fight_rows.iterrows():
                         defending = 'Y'
                     elif fighter_col_index == 3 and str(row[0].lower()) == 'unified tag team championship':
                         defending = 'Y'
-                    elif '(Defending)' in fighter:
-                        defending = 'Y'
                     else:
                         defending = None
+                elif '(Defending)' in fighter: # used to catch Scramble and Tourney Defenders (1 seeds for example)
+                        defending = 'Y'
                 else:
                     defending = None
                 if index + 1 < len(df):
