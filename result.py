@@ -37,7 +37,9 @@ for index, row in fight_rows.iterrows():
                 else:
                     seed = None
                 if pd.notna(row[0]) and re.findall(r'^(?!.*\b(spot|added)\b).* championship$', str(row[0]).lower()):
-                    if fighter_col_index == 2:
+                    if 'vs.' in str(row[0]).lower() and '(Defending)' not in fighter:
+                        defending = None
+                    elif fighter_col_index == 2:
                         defending = 'Y'
                     elif fighter_col_index == 3 and str(row[0].lower()) == 'unified tag team championship':
                         defending = 'Y' # also gets teammate of tag champion in first cell
