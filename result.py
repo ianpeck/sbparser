@@ -39,6 +39,8 @@ for index, row in fight_rows.iterrows():
                 if pd.notna(row[0]) and re.findall(r'^(?!.*\b(spot|added)\b).* championship$', str(row[0]).lower()):
                     if fighter_col_index == 2:
                         defending = 'Y'
+                    elif fighter_col_index == 3 and str(row[0].lower()) == 'unified tag team championship':
+                        defending = 'Y'
                     else:
                         defending = None
                 else:
