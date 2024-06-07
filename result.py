@@ -5,7 +5,7 @@ import re
 # Load the spreadsheet
 file_path = r'/Users/ianjpeck/Documents/GitHub/sbparser/FullSeason5.xlsx'
 spreadsheet = pd.ExcelFile(file_path)
-result_id_start = 4323 # Season 5
+result_id_start = 4324 # Season 5
 
 # Load the data from the first sheet
 df = pd.read_excel(file_path, sheet_name='Sheet1')

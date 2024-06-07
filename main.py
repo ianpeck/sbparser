@@ -122,15 +122,15 @@ for index, row in fight_rows.iterrows():
 # Create the DataFrame with everything in both Brand_ID and PPV_ID
 fight_id_df = pd.DataFrame({
     'Fight_ID': fight_ids,
-    'Brand_ID': brand_ids,
     'Location_ID': location_ids,
+    'Brand_ID': brand_ids,
     'PPV_ID': ppv_ids,
     'Championship_ID': championship_ids,
     'FightType_ID': fight_type_ids,
     'Season_ID': season,
     'Month': months,
     'Week': weeks,
-    '#1ContenderIndicator': contenders
+    'Contender_Indicator': contenders
 })
 
 fight_id_df.to_csv(r'/Users/ianjpeck/Documents/GitHub/sbparser/fight_test.csv', index=False)
