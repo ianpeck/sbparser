@@ -17,13 +17,13 @@ results = []
 fight_counter = 0
 for index, row in fight_rows.iterrows():
     if row.astype(str).str.contains('- W').any():
-        fight_counter += 1
+        fight_counter += 1 # increment to next fight each time a - W is seen in a row (confirmed there are no issues with this)
     # Find Fighters
     if str(row[1]).isdigit():
-        fighters = row.iloc[2:][row.iloc[2:].apply(lambda x: isinstance(x, str))].tolist()
+        fighters = row.iloc[2:][row.iloc[2:].apply(lambda x: isinstance(x, str))].tolist() # fighters can only appear past column 2
         
         for fighter in fighters:
-            if fighter not in ('Brawl', 'Melee', 'Ultimate'): # Remove Tournament Issues
+            if fighter not in ('Brawl', 'Melee', 'Ultimate'): # Remove Tournament Issues where it would catch these strings
                 fighter_name = fighter.replace('- W','').replace('(PL)','').replace('(Defending)','').strip()
                 decision = 'w' if '- W' in fighter else 'l'
                 fighter_index = row[row == fighter].index[0]
@@ -31,16 +31,16 @@ for index, row in fight_rows.iterrows():
                 if row.astype(str).str.contains('vs.').any():
                     seed_string = df.iloc[index, 0]
                     if fighter_col_index == 2:
-                        seed = seed_string.split()[0]
+                        seed = seed_string.split()[0] # first cell is first seed
                     elif fighter_col_index == 3:
-                        seed = seed_string.split()[2]
+                        seed = seed_string.split()[2] # second cell is whatever comes after 'vs.'
                 else:
                     seed = None
                 if pd.notna(row[0]) and re.findall(r'^(?!.*\b(spot|added)\b).* championship$', str(row[0]).lower()):
                     if fighter_col_index == 2:
                         defending = 'Y'
                     elif fighter_col_index == 3 and str(row[0].lower()) == 'unified tag team championship':
-                        defending = 'Y'
+                        defending = 'Y' # also gets teammate of tag champion in first cell
                     else:
                         defending = None
                 elif '(Defending)' in fighter: # used to catch Scramble and Tourney Defenders (1 seeds for example)
@@ -48,7 +48,7 @@ for index, row in fight_rows.iterrows():
                 else:
                     defending = None
                 if index + 1 < len(df):
-                    value_below = str(df.iloc[index + 1, fighter_col_index]).replace('HP','').strip()
+                    value_below = str(df.iloc[index + 1, fighter_col_index]).replace('HP','').strip() # grab result which is below fighter name cell
                     results.append({'Result_ID': result_id_start,'Fight_ID': fight_counter, 'Fighter': fighter_name, 'Match_Result': value_below, 'Decision': decision, 'Seed': seed, 'DefendingIndicator': defending})
                     result_id_start += 1
 
