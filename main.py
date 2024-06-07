@@ -43,7 +43,7 @@ current_location = None
 current_championship = None
 
 # Loop through the DataFrame to assign Fight_ID, Brand_ID, Location_ID, PPV_ID, and Championship_ID
-fight_counter = 0
+fight_counter = 1910 # Season 5
 week_change_counter = 0
 for index, row in fight_rows.iterrows():
     # -----------------------------------------
