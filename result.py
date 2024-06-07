@@ -24,7 +24,7 @@ for index, row in fight_rows.iterrows():
         
         for fighter in fighters:
             if fighter not in ('Brawl', 'Melee', 'Ultimate'): # Remove Tournament Issues
-                fighter_name = fighter.replace('- W','').replace('(PL)','').strip()
+                fighter_name = fighter.replace('- W','').replace('(PL)','').replace('(Defending)','').strip()
                 decision = 'w' if '- W' in fighter else 'l'
                 fighter_index = row[row == fighter].index[0]
                 fighter_col_index = df.columns.get_loc(fighter_index)
@@ -40,6 +40,8 @@ for index, row in fight_rows.iterrows():
                     if fighter_col_index == 2:
                         defending = 'Y'
                     elif fighter_col_index == 3 and str(row[0].lower()) == 'unified tag team championship':
+                        defending = 'Y'
+                    elif '(Defending)' in fighter:
                         defending = 'Y'
                     else:
                         defending = None
