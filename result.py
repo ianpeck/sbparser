@@ -37,7 +37,8 @@ for index, row in fight_rows.iterrows():
                 else:
                     seed = None
                 if pd.notna(row[0]) and re.findall(r'^(?!.*\b(spot|added)\b).* championship$', str(row[0]).lower()):
-                    if 'vs.' in str(row[0]).lower() and '(Defending)' not in fighter:
+                    # fighter is not defending if a tourney or scramble (vs.) match occurs without the string 'Defending' in name
+                    if 'vs.' in str(row[0]).lower() and '(Defending)' not in fighter: 
                         defending = None
                     elif fighter_col_index == 2:
                         defending = 'Y'
