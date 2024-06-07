@@ -1,6 +1,7 @@
 - Continue to eliminate typos from Excel/reformat (All Seasons)
 X refine "Spot in" logic regex for #1 contender (to catch Port Town Aero Drive but not others)
 X Defending Automation?
+- Remake Excel Season 5
 - Defending Scramble
 - Defending Tournament
 X Remove Seed info from Scramble Championship Row
