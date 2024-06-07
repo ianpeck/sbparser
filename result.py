@@ -46,7 +46,7 @@ for index, row in fight_rows.iterrows():
                 else:
                     defending = None
                 if index + 1 < len(df):
-                    value_below = df.iloc[index + 1, fighter_col_index]
+                    value_below = str(df.iloc[index + 1, fighter_col_index]).replace('HP','').strip()
                     results.append({'Result_ID': result_id_start,'Fight_ID': fight_counter, 'Fighter': fighter_name, 'Match_Result': value_below, 'Decision': decision, 'Seed': seed, 'DefendingIndicator': defending})
                     result_id_start += 1
 

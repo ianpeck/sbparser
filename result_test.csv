@@ -156,7 +156,7 @@ Result_ID,Fight_ID,Fighter,Match_Result,Decision,Seed,DefendingIndicator
 155,72,Diddy Kong,3,w,,Y
 156,72,DK,0,l,,
 157,73,Mr. Game & Watch,0,l,,Y
-158,73,Yoshi,175 HP,w,,
+158,73,Yoshi,175,w,,
 159,74,Meta Knight,0,l,,
 160,74,Pokemon Trainer,0,l,,
 161,74,Toon Link,0,l,,
