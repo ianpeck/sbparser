@@ -32,7 +32,7 @@ Fight_ID,Location_ID,Brand_ID,PPV_ID,Championship_ID,FightType_ID,Season_ID,Mont
 1941,Rumble Falls,,Royal Rumble,Animal Championship,1,5,1,4,
 1942,Rumble Falls,,Royal Rumble,Unified Tag Team Championship,12,5,1,4,
 1943,Rumble Falls,,Royal Rumble,Human Championship,1,5,1,4,
-1944,Rumble Falls,,Royal Rumble,Special Championship,1,5,1,4,
+1944,Rumble Falls,,Royal Rumble,Special Championship,3,5,1,4,
 1945,Rumble Falls,,Royal Rumble,Hardcore Championship,2,5,1,4,
 1946,Rumble Falls,,Royal Rumble,Melee Championship,1,5,1,4,
 1947,Rumble Falls,,Royal Rumble,Brawl Championship,1,5,1,4,
@@ -55,7 +55,7 @@ Fight_ID,Location_ID,Brand_ID,PPV_ID,Championship_ID,FightType_ID,Season_ID,Mont
 1964,Frigate Orpheon,2.0,,,1,5,2,2,
 1965,Frigate Orpheon,2.0,,,1,5,2,2,
 1966,Frigate Orpheon,2.0,,,1,5,2,2,
-1967,Frigate Orpheon,2.0,,,1,5,2,2,#1 Contender Special
+1967,Frigate Orpheon,2.0,,,4,5,2,2,#1 Contender Special
 1968,Frigate Orpheon,2.0,,,1,5,2,2,
 1969,Yoshi's Island (Brawl),1.0,,,1,5,2,3,
 1970,Yoshi's Island (Brawl),1.0,,,2,5,2,3,#1 Contender Hardcore
@@ -71,7 +71,7 @@ Fight_ID,Location_ID,Brand_ID,PPV_ID,Championship_ID,FightType_ID,Season_ID,Mont
 1980,Pokemon Stadium 2,,Pokeslam,Unified Tag Team Championship,12,5,2,4,
 1981,Pokemon Stadium 2,,Pokeslam,Animal Championship,1,5,2,4,
 1982,Pokemon Stadium 2,,Pokeslam,Human Championship,1,5,2,4,
-1983,Pokemon Stadium 2,,Pokeslam,Special Championship,1,5,2,4,
+1983,Pokemon Stadium 2,,Pokeslam,Special Championship,4,5,2,4,
 1984,Pokemon Stadium 2,,Pokeslam,,7,5,2,4,
 1985,Pokemon Stadium 2,,Pokeslam,Brawl Championship,1,5,2,4,
 1986,Pokemon Stadium 2,,Pokeslam,Melee Championship,1,5,2,4,
@@ -181,11 +181,11 @@ Fight_ID,Location_ID,Brand_ID,PPV_ID,Championship_ID,FightType_ID,Season_ID,Mont
 2090,Onett,2.0,,,1,5,5,3,
 2091,Onett,2.0,,,1,5,5,3,
 2092,Onett,2.0,,,1,5,5,3,
-2093,Onett,2.0,,,1,5,5,3,#1 contender Special
+2093,Onett,2.0,,,4,5,5,3,#1 contender Special
 2094,Onett,2.0,,,1,5,5,3,
 2095,Corneria,,Ignition,Unified Tag Team Championship,12,5,5,4,
 2096,Corneria,,Ignition,Hardcore Championship,2,5,5,4,
-2097,Corneria,,Ignition,Special Championship,1,5,5,4,
+2097,Corneria,,Ignition,Special Championship,4,5,5,4,
 2098,Corneria,,Ignition,Human Championship,1,5,5,4,
 2099,Corneria,,Ignition,Animal Championship,1,5,5,4,
 2100,Corneria,,Ignition,Brawl Championship,1,5,5,4,
@@ -219,11 +219,11 @@ Fight_ID,Location_ID,Brand_ID,PPV_ID,Championship_ID,FightType_ID,Season_ID,Mont
 2128,Battlefield,2.0,,,1,5,6,3,
 2129,Battlefield,2.0,,,1,5,6,3,
 2130,Battlefield,2.0,,,1,5,6,3,
-2131,Battlefield,2.0,,,1,5,6,3,#1 contender special
+2131,Battlefield,2.0,,,4,5,6,3,#1 contender special
 2132,Battlefield,2.0,,,1,5,6,3,
 2133,Delfino Plaza,,Summer Slam,Animal Championship,1,5,6,4,
 2134,Delfino Plaza,,Summer Slam,Human Championship,1,5,6,4,
-2135,Delfino Plaza,,Summer Slam,Special Championship,1,5,6,4,
+2135,Delfino Plaza,,Summer Slam,Special Championship,4,5,6,4,
 2136,Delfino Plaza,,Summer Slam,Hardcore Championship,2,5,6,4,
 2137,Delfino Plaza,,Summer Slam,Unified Tag Team Championship,12,5,6,4,
 2138,Delfino Plaza,,Summer Slam,Brawl Championship,1,5,6,4,
@@ -305,8 +305,8 @@ Fight_ID,Location_ID,Brand_ID,PPV_ID,Championship_ID,FightType_ID,Season_ID,Mont
 2214,Halberd,1.0,,,2,5,8,2,Spot in Hardcore
 2215,Yoshi's Island (Brawl),2.0,,,1,5,8,2,
 2216,Yoshi's Island (Brawl),2.0,,,1,5,8,2,
-2217,Yoshi's Island (Brawl),2.0,,,1,5,8,2,Spot in Special
-2218,Yoshi's Island (Brawl),2.0,,,1,5,8,2,Spot in Special
+2217,Yoshi's Island (Brawl),2.0,,,4,5,8,2,Spot in Special
+2218,Yoshi's Island (Brawl),2.0,,,4,5,8,2,Spot in Special
 2219,Yoshi's Island (Brawl),2.0,,,1,5,8,2,Spot in Melee
 2220,Pokemon Stadium 2,1.0,,,1,5,8,3,
 2221,Pokemon Stadium 2,1.0,,,1,5,8,3,
@@ -320,7 +320,7 @@ Fight_ID,Location_ID,Brand_ID,PPV_ID,Championship_ID,FightType_ID,Season_ID,Mont
 2229,Lylat Cruise,2.0,,,1,5,8,3,
 2230,Port Town Aero Drive,,The Great Race,Unified Tag Team Championship,12,5,8,4,
 2231,Port Town Aero Drive,,The Great Race,Human Championship,1,5,8,4,
-2232,Port Town Aero Drive,,The Great Race,Special Championship,1,5,8,4,
+2232,Port Town Aero Drive,,The Great Race,Special Championship,4,5,8,4,
 2233,Port Town Aero Drive,,The Great Race,Hardcore Championship,2,5,8,4,
 2234,Port Town Aero Drive,,The Great Race,Animal Championship,1,5,8,4,
 2235,Port Town Aero Drive,,The Great Race,Brawl Championship,1,5,8,4,
@@ -342,7 +342,7 @@ Fight_ID,Location_ID,Brand_ID,PPV_ID,Championship_ID,FightType_ID,Season_ID,Mont
 2251,Castle Siege,1.0,,,1,5,9,2,#1 Contender Brawl
 2252,Distant Planet,2.0,,,1,5,9,2,
 2253,Distant Planet,2.0,,,1,5,9,2,
-2254,Distant Planet,2.0,,,1,5,9,2,#1 contender Special
+2254,Distant Planet,2.0,,,3,5,9,2,#1 contender Special
 2255,Distant Planet,2.0,,,1,5,9,2,
 2256,Distant Planet,2.0,,,1,5,9,2,#1 contender Melee
 2257,Smashville,1.0,,,12,5,9,3,#1 Contender Tag
@@ -357,7 +357,7 @@ Fight_ID,Location_ID,Brand_ID,PPV_ID,Championship_ID,FightType_ID,Season_ID,Mont
 2266,75m,2.0,,,1,5,9,3,
 2267,Summit,,King of the Hill,Animal Championship,1,5,9,4,
 2268,Summit,,King of the Hill,Hardcore Championship,2,5,9,4,
-2269,Summit,,King of the Hill,Special Championship,1,5,9,4,
+2269,Summit,,King of the Hill,Special Championship,3,5,9,4,
 2270,Summit,,King of the Hill,Human Championship,1,5,9,4,
 2271,Summit,,King of the Hill,Unified Tag Team Championship,12,5,9,4,
 2272,Summit,,King of the Hill,Melee Championship,1,5,9,4,
@@ -396,7 +396,7 @@ Fight_ID,Location_ID,Brand_ID,PPV_ID,Championship_ID,FightType_ID,Season_ID,Mont
 2305,Shadow Moses Island,,Cyber Sunday,Hardcore Championship,2,5,10,4,
 2306,Shadow Moses Island,,Cyber Sunday,Animal Championship,1,5,10,4,
 2307,Shadow Moses Island,,Cyber Sunday,Human Championship,1,5,10,4,
-2308,Shadow Moses Island,,Cyber Sunday,Special Championship,1,5,10,4,
+2308,Shadow Moses Island,,Cyber Sunday,Special Championship,4,5,10,4,
 2309,Shadow Moses Island,,Cyber Sunday,Unified Tag Team Championship,12,5,10,4,
 2310,Shadow Moses Island,,Cyber Sunday,Brawl Championship,1,5,10,4,
 2311,Shadow Moses Island,,Cyber Sunday,Melee Championship,1,5,10,4,
@@ -432,7 +432,7 @@ Fight_ID,Location_ID,Brand_ID,PPV_ID,Championship_ID,FightType_ID,Season_ID,Mont
 2341,Corneria,2.0,,,1,5,11,3,
 2342,Rainbow Cruise,,Championship Cruise,Animal Championship,1,5,11,4,
 2343,Rainbow Cruise,,Championship Cruise,Human Championship,1,5,11,4,
-2344,Rainbow Cruise,,Championship Cruise,Special Championship,1,5,11,4,
+2344,Rainbow Cruise,,Championship Cruise,Special Championship,3,5,11,4,
 2345,Rainbow Cruise,,Championship Cruise,Hardcore Championship,2,5,11,4,
 2346,Rainbow Cruise,,Championship Cruise,Unified Tag Team Championship,12,5,11,4,
 2347,Rainbow Cruise,,Championship Cruise,Melee Championship,1,5,11,4,
@@ -464,11 +464,11 @@ Fight_ID,Location_ID,Brand_ID,PPV_ID,Championship_ID,FightType_ID,Season_ID,Mont
 2373,Disrespect,1.0,,,2,5,12,3,#1 Contender Hardcore
 2374,Risk,2.0,,,1,5,12,3,
 2375,Risk,2.0,,,1,5,12,3,
-2376,Risk,2.0,,,1,5,12,3,#1 contender Special
+2376,Risk,2.0,,,4,5,12,3,#1 contender Special
 2377,Risk,2.0,,,1,5,12,3,#1 contender Animal
 2378,Risk,2.0,,,1,5,12,3,Spot in Melee
 2379,X5,,Championship Scramble,Hardcore Championship,2,5,12,4,
-2380,X5,,Championship Scramble,Special Championship,1,5,12,4,
+2380,X5,,Championship Scramble,Special Championship,4,5,12,4,
 2381,X5,,Championship Scramble,Human Championship,1,5,12,4,
 2382,X5,,Championship Scramble,Animal Championship,1,5,12,4,
 2383,X5,,Championship Scramble,Unified Tag Team Championship,12,5,12,4,

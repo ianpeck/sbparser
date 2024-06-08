@@ -46,6 +46,7 @@ current_championship = None
 fight_counter = 1910 # Season 5
 week_change_counter = 0
 for index, row in fight_rows.iterrows():
+    next_row = df.iloc[index + 1] if index + 1 < len(df) else None
     # -----------------------------------------
     # Check for brand or PPV names
     # -----------------------------------------
@@ -77,14 +78,32 @@ for index, row in fight_rows.iterrows():
     # -----------------------------------------
     if pd.notna(row[0]) and 'Tag' in str(row[0]):
         current_fight_type = 12 # Tag
-    elif pd.notna(row[0]) and 'Coin' in str(row[0]):
+    elif pd.notna(row[0]) and re.match(r'^coin match.*', str(next_row[0]).lower().strip()):
         current_fight_type = 3 # Coin
-    elif pd.notna(row[0]) and 'Hardcore' in str(row[0]):
+    elif pd.notna(row[0]) and 'hardcore' in str(row[0]).lower() and current_ppv.lower() == 'brawlmania':
+        current_fight_type = 6
+    elif pd.notna(row[0]) and ('hardcore' in str(row[0]).lower() or 'hardcore match' in  str(next_row[0]).lower().strip()):
         current_fight_type = 2 # 3 Minute
+    elif pd.notna(row[0]) and str(row[0]).lower().strip() in ['special championship', '#1 contender special', 'spot in special'] and pd.notna(next_row[0]):
+        current_fight_type = 4
+    elif pd.notna(row[0]) and current_ppv.lower() == 'championship scramble' and 'vs' in str(row[0]).lower().strip():
+        current_fight_type = 11
+    elif pd.notna(row[0]) and current_ppv.lower() == 'brawlmania':
+        current_fight_type = 5
     elif pd.notna(row[0]) and str(row[0]).strip() == 'Royal Rumble':
         current_fight_type = 8
     elif pd.notna(row[0]) and str(row[0]).strip() == 'Pokeball Match':
         current_fight_type = 7
+    elif pd.notna(row[0]) and str(row[0]).strip().lower() in ['mitb melee', 'mitb ultimate', 'mitb brawl']:
+        current_fight_type = 9
+    elif pd.notna(row[0]) and current_ppv.lower() == 'final destination tournament':
+        current_fight_type = 15
+    elif pd.notna(row[0]) and 'cash' in str(next_row[0]).lower().strip():
+        current_fight_type = 14
+    elif pd.notna(row[0]) and str(next_row[0]).lower().strip() == 'handicap match':
+        current_fight_type = 13
+    elif pd.notna(row[0]) and str(row[0]).lower().strip() == 'smash series match':
+        current_fight_type = 18
     else:
         current_fight_type = 1 # 3 stock
     # -----------------------------------------
