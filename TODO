@@ -6,12 +6,13 @@ X Defending Automation?
 x Defending Scramble
 X Defending Tournament
 X Remove Seed info from Scramble Championship Row
-- Championship ID CSV eventually to automatically catch id
+- Championship ID CSV add in eventually to automatically catch id
+X Fight Types
 - Beat the clock checks for season 6, compare to other seasons on how to handle
 X Seed add for Scramble
 X Seed 
 X cash ins 
 X and other strings that trigger a championship
-- QA Season 5 + fill in manual columns that are remaining (focusing on Fight_Type)
-- What is a Handicap match?
+- QA Season 5 + fill in manual columns that are remaining
+X What is a Handicap match?
 - Do the same for Season 6 & 7
