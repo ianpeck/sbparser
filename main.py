@@ -40,6 +40,7 @@ weeks = []
 # Variables to keep track of the current brand, location, and championship
 current_brand = None
 current_location = None
+current_ppv = None
 current_championship = None
 
 # Loop through the DataFrame to assign Fight_ID, Brand_ID, Location_ID, PPV_ID, and Championship_ID
@@ -80,15 +81,15 @@ for index, row in fight_rows.iterrows():
         current_fight_type = 12 # Tag
     elif pd.notna(row[0]) and re.match(r'^coin match.*', str(next_row[0]).lower().strip()):
         current_fight_type = 3 # Coin
-    elif pd.notna(row[0]) and 'hardcore' in str(row[0]).lower() and current_ppv.lower() == 'brawlmania':
+    elif pd.notna(row[0]) and 'hardcore' in str(row[0]).lower() and current_ppv == 'Brawlmania':
         current_fight_type = 6
     elif pd.notna(row[0]) and ('hardcore' in str(row[0]).lower() or 'hardcore match' in  str(next_row[0]).lower().strip()):
         current_fight_type = 2 # 3 Minute
     elif pd.notna(row[0]) and str(row[0]).lower().strip() in ['special championship', '#1 contender special', 'spot in special'] and pd.notna(next_row[0]):
         current_fight_type = 4
-    elif pd.notna(row[0]) and current_ppv.lower() == 'championship scramble' and 'vs' in str(row[0]).lower().strip():
+    elif pd.notna(row[0]) and current_ppv == 'Championship Scramble' and 'vs' in str(row[0]).lower().strip():
         current_fight_type = 11
-    elif pd.notna(row[0]) and current_ppv.lower() == 'brawlmania':
+    elif pd.notna(row[0]) and current_ppv == 'Brawlmania':
         current_fight_type = 5
     elif pd.notna(row[0]) and str(row[0]).strip() == 'Royal Rumble':
         current_fight_type = 8
@@ -96,7 +97,7 @@ for index, row in fight_rows.iterrows():
         current_fight_type = 7
     elif pd.notna(row[0]) and str(row[0]).strip().lower() in ['mitb melee', 'mitb ultimate', 'mitb brawl']:
         current_fight_type = 9
-    elif pd.notna(row[0]) and current_ppv.lower() == 'final destination tournament':
+    elif pd.notna(row[0]) and current_ppv == 'Final Destination Tournament':
         current_fight_type = 15
     elif pd.notna(row[0]) and 'cash' in str(next_row[0]).lower().strip():
         current_fight_type = 14
