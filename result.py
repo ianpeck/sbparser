@@ -24,7 +24,7 @@ for index, row in fight_rows.iterrows():
         
         for fighter in fighters:
             if fighter not in ('Brawl', 'Melee', 'Ultimate'): # Remove Tournament Issues where it would catch these strings
-                fighter_name = fighter.replace('- W','').replace('(PL)','').replace('(Defending)','').strip()
+                fighter_name = fighter.replace('- W','').replace('(PL)','').replace('(Defending)','').replace('.','').strip()
                 decision = 'w' if '- W' in fighter else 'l'
                 fighter_index = row[row == fighter].index[0]
                 fighter_col_index = df.columns.get_loc(fighter_index)
