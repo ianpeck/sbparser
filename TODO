@@ -2,6 +2,7 @@
 - Name Typos happen a lot in the Excel, fix them
 X refine "Spot in" logic regex for #1 contender (to catch Port Town Aero Drive but not others)
 X Defending Automation?
+- Are All Tag matches captured?
 - Remake Excel Season 5
 x Defending Scramble
 X Defending Tournament
@@ -15,4 +16,5 @@ X cash ins
 X and other strings that trigger a championship
 - QA Season 5 + fill in manual columns that are remaining
 X What is a Handicap match?
+- Manually remove Diddy Kong forfeit defending indicator from Season 5 (ROB)
 - Do the same for Season 6 & 7
