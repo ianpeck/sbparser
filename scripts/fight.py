@@ -1,8 +1,8 @@
 """Parse fight metadata from a Smash Bros tournament Excel spreadsheet.
 
-Reads FullSeason5.xlsx and extracts one row per fight with brand, location,
-PPV, championship, fight type, season, month, week, and contender indicator.
-Outputs fight_test.csv.
+Reads the Excel file specified in config.yaml and extracts one row per fight
+with brand, location, PPV, championship, fight type, season, month, week, and
+contender indicator. Outputs fight_test.csv.
 """
 
 import math
@@ -10,57 +10,35 @@ import re
 from pathlib import Path
 
 import pandas as pd
+import yaml
 
 # ---------------------------------------------------------------------------
-# Constants
-# ---------------------------------------------------------------------------
-
-SEASON = 5
-FIGHT_ID_START = 1910
-
-# Fight type IDs
-FIGHT_TYPE_THREE_STOCK = 1
-FIGHT_TYPE_HARDCORE = 2
-FIGHT_TYPE_COIN = 3
-FIGHT_TYPE_SPECIAL = 4
-FIGHT_TYPE_BRAWLMANIA = 5
-FIGHT_TYPE_BRAWLMANIA_HARDCORE = 6
-FIGHT_TYPE_POKEBALL = 7
-FIGHT_TYPE_ROYAL_RUMBLE = 8
-FIGHT_TYPE_MITB = 9
-FIGHT_TYPE_CHAMPIONSHIP_SCRAMBLE = 11
-FIGHT_TYPE_TAG = 12
-FIGHT_TYPE_HANDICAP = 13
-FIGHT_TYPE_CASH_IN = 14
-FIGHT_TYPE_FINAL_DESTINATION = 15
-FIGHT_TYPE_SMASH_SERIES = 18
-
-# Brand IDs
-BRAND_BRAWL = 1
-BRAND_MELEE = 2
-BRAND_ULTIMATE = 3
-
-BRANDS = {
-    "Brawl": BRAND_BRAWL,
-    "Melee": BRAND_MELEE,
-    "Ultimate": BRAND_ULTIMATE,
-}
-
-CHAMPIONSHIP_NAMES = [
-    "Brawl", "Melee", "Ultimate", "Animal", "Human", "Monster",
-    "Hardcore", "Special", "Chaos", "Tag", "Tag Team", "Unified Tag",
-    "Smash Bros.",
-]
-
-# ---------------------------------------------------------------------------
-# Path setup — resolve everything relative to the project root
+# Config — season-specific values loaded from config.yaml
 # ---------------------------------------------------------------------------
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-EXCEL_PATH = BASE_DIR / "data" / "FullSeason5.xlsx"
+with open(BASE_DIR / "config.yaml") as f:
+    _config = yaml.safe_load(f)
+
+SEASON = _config["season"]
+FIGHT_ID_START = _config["fight_id_start"]
+
+# Lookup dictionaries (loaded from CSVs at runtime)
+BRANDS = {}
+FIGHT_TYPES = {}
+CHAMPIONSHIP_NAMES = []
+
+# ---------------------------------------------------------------------------
+# Path setup
+# ---------------------------------------------------------------------------
+
+EXCEL_PATH = BASE_DIR / "input" / _config["excel_file"]
 LOCATION_CSV = BASE_DIR / "lookups" / "Location_ID.csv"
 PPV_CSV = BASE_DIR / "lookups" / "PPV.csv"
-OUTPUT_CSV = BASE_DIR / "output" / "fight_test.csv"
+BRAND_CSV = BASE_DIR / "lookups" / "Brand.csv"
+FIGHT_TYPE_CSV = BASE_DIR / "lookups" / "FightType.csv"
+CHAMPIONSHIP_CSV = BASE_DIR / "lookups" / "Championship.csv"
+OUTPUT_CSV = BASE_DIR / "output" / f"season_{SEASON}_fight.csv"
 
 
 # ---------------------------------------------------------------------------
@@ -68,11 +46,15 @@ OUTPUT_CSV = BASE_DIR / "output" / "fight_test.csv"
 # ---------------------------------------------------------------------------
 
 def load_reference_data():
-    """Load location and PPV lookup tables from CSV files.
+    """Load all lookup tables from CSV files.
+
+    Populates global BRANDS, FIGHT_TYPES, and CHAMPIONSHIP_NAMES dictionaries.
 
     Returns:
         tuple: (location_dict, ppv_dict) mapping lowercase names to IDs.
     """
+    global BRANDS, FIGHT_TYPES, CHAMPIONSHIP_NAMES
+
     df_location = pd.read_csv(LOCATION_CSV)
     location_dict = dict(
         zip(df_location["Location_Name"].str.lower(), df_location["Location_ID"])
@@ -82,6 +64,15 @@ def load_reference_data():
     ppv_dict = dict(
         zip(df_ppv["PPV_Name"].str.lower(), df_ppv["PPV_ID"])
     )
+
+    df_brands = pd.read_csv(BRAND_CSV)
+    BRANDS = dict(zip(df_brands["Brand_Name"], df_brands["Brand_ID"]))
+
+    df_fight_types = pd.read_csv(FIGHT_TYPE_CSV)
+    FIGHT_TYPES = dict(zip(df_fight_types["FightType_Name"], df_fight_types["FightType_ID"]))
+
+    df_championships = pd.read_csv(CHAMPIONSHIP_CSV)
+    CHAMPIONSHIP_NAMES = df_championships["Championship_Name"].tolist()
 
     return location_dict, ppv_dict
 
@@ -156,10 +147,10 @@ def determine_fight_type(row, next_row, current_ppv):
         current_ppv: Name of the current PPV context, if any.
 
     Returns:
-        int: Fight type ID constant.
+        int: Fight type ID from FIGHT_TYPES lookup.
     """
     if pd.isna(row[0]):
-        return FIGHT_TYPE_THREE_STOCK
+        return FIGHT_TYPES["Three Stock"]
 
     text = str(row[0])
     text_lower = text.lower().strip()
@@ -167,64 +158,64 @@ def determine_fight_type(row, next_row, current_ppv):
 
     # Tag match — checked first because tag matches can overlap with other types
     if "Tag" in text:
-        return FIGHT_TYPE_TAG
+        return FIGHT_TYPES["Tag"]
 
     # Coin match — indicated by "coin match..." on the row below
     if re.match(r"^coin match.*", next_text_lower):
-        return FIGHT_TYPE_COIN
+        return FIGHT_TYPES["Coin"]
 
     # Brawlmania Hardcore — hardcore during Brawlmania is its own type
     if "hardcore" in text_lower and current_ppv == "Brawlmania":
-        return FIGHT_TYPE_BRAWLMANIA_HARDCORE
+        return FIGHT_TYPES["Brawlmania Hardcore"]
 
     # Hardcore — either in this row's text or "hardcore match" on the next row
     if "hardcore" in text_lower or "hardcore match" in next_text_lower:
-        return FIGHT_TYPE_HARDCORE
+        return FIGHT_TYPES["Hardcore"]
 
     # Special championship / contender / spot-in on a row with a following row
     if text_lower in [
         "special championship", "#1 contender special", "spot in special"
     ] and pd.notna(next_row[0]) if next_row is not None else False:
-        return FIGHT_TYPE_SPECIAL
+        return FIGHT_TYPES["Special"]
 
     # Championship Scramble PPV — any "vs" row during this PPV
     if current_ppv == "Championship Scramble" and "vs" in text_lower:
-        return FIGHT_TYPE_CHAMPIONSHIP_SCRAMBLE
+        return FIGHT_TYPES["Championship Scramble"]
 
     # Brawlmania PPV — any remaining fight during Brawlmania
     if current_ppv == "Brawlmania":
-        return FIGHT_TYPE_BRAWLMANIA
+        return FIGHT_TYPES["Brawlmania"]
 
     # Royal Rumble
     if text.strip() == "Royal Rumble":
-        return FIGHT_TYPE_ROYAL_RUMBLE
+        return FIGHT_TYPES["Royal Rumble"]
 
     # Pokeball Match
     if text.strip() == "Pokeball Match":
-        return FIGHT_TYPE_POKEBALL
+        return FIGHT_TYPES["Pokeball"]
 
     # Money in the Bank ladder matches
     if text.strip().lower() in ["mitb melee", "mitb ultimate", "mitb brawl"]:
-        return FIGHT_TYPE_MITB
+        return FIGHT_TYPES["Money in the Bank"]
 
     # Final Destination Tournament PPV
     if current_ppv == "Final Destination Tournament":
-        return FIGHT_TYPE_FINAL_DESTINATION
+        return FIGHT_TYPES["Final Destination"]
 
     # Cash-in — indicated by "cash" on the row below
     if "cash" in next_text_lower:
-        return FIGHT_TYPE_CASH_IN
+        return FIGHT_TYPES["Cash In"]
 
     # Handicap match — indicated by "handicap match" on the row below
     if next_text_lower == "handicap match":
-        return FIGHT_TYPE_HANDICAP
+        return FIGHT_TYPES["Handicap"]
 
     # Smash Series match
     if text_lower == "smash series match":
-        return FIGHT_TYPE_SMASH_SERIES
+        return FIGHT_TYPES["Smash Series"]
 
     # Default: standard 3-stock match
-    return FIGHT_TYPE_THREE_STOCK
+    return FIGHT_TYPES["Three Stock"]
 
 
 def parse_month(row, current_month):
@@ -290,7 +281,7 @@ def parse_fights(df):
     current_ppv = None
     current_championship = None
     current_month = None
-    fight_counter = FIGHT_ID_START
+    fight_counter = FIGHT_ID_START - 1
     week_change_counter = 0
 
     for index, row in df.iterrows():
@@ -350,6 +341,13 @@ def main():
     load_reference_data()  # validates that reference CSVs exist
     df = pd.read_excel(EXCEL_PATH, sheet_name="Sheet1")
     fight_df = parse_fights(df)
+
+    # Convert numeric columns to integers (using nullable Int64 to handle NaN)
+    int_columns = ["Fight_ID", "Brand_ID", "FightType_ID", "Season_ID"]
+    for col in int_columns:
+        if col in fight_df.columns:
+            fight_df[col] = fight_df[col].astype("Int64")
+
     fight_df.to_csv(OUTPUT_CSV, index=False)
 
 

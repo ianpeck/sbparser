@@ -1,33 +1,37 @@
 """Parse fighter results from a Smash Bros tournament Excel spreadsheet.
 
-Reads FullSeason5.xlsx and extracts one row per fighter per fight, including
-decision (win/loss), match result value, seed, and defending indicator.
-Outputs result_test.csv.
+Reads the Excel file specified in config.yaml and extracts one row per fighter
+per fight, including decision (win/loss), match result value, seed, and
+defending indicator. Outputs result_test.csv.
 """
 
 import re
 from pathlib import Path
 
 import pandas as pd
+import yaml
 
 # ---------------------------------------------------------------------------
-# Constants
+# Config — season-specific values loaded from config.yaml
 # ---------------------------------------------------------------------------
 
-SEASON = 5
-RESULT_ID_START = 4324
-FIGHT_ID_START = 1910
+BASE_DIR = Path(__file__).resolve().parent.parent
+with open(BASE_DIR / "config.yaml") as f:
+    _config = yaml.safe_load(f)
+
+SEASON = _config["season"]
+RESULT_ID_START = _config["result_id_start"]
+FIGHT_ID_START = _config["fight_id_start"]
 
 # Brand names that can appear in fighter columns but are not actual fighters
 BRAND_NAMES = {"Brawl", "Melee", "Ultimate"}
 
 # ---------------------------------------------------------------------------
-# Path setup — resolve everything relative to the project root
+# Path setup
 # ---------------------------------------------------------------------------
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-EXCEL_PATH = BASE_DIR / "data" / "FullSeason5.xlsx"
-OUTPUT_CSV = BASE_DIR / "output" / "result_test.csv"
+EXCEL_PATH = BASE_DIR / "input" / _config["excel_file"]
+OUTPUT_CSV = BASE_DIR / "output" / f"season_{SEASON}_result.csv"
 
 
 # ---------------------------------------------------------------------------
@@ -38,7 +42,7 @@ def parse_fighters_from_row(row, df, index, fight_id, result_id):
     """Extract all fighter results from a single fighter row.
 
     Fighter rows have a numeric seed in column 1. Fighters appear in
-    columns 2+ as strings. Each fighter's match result (HP value) is in
+    columns 2+ as strings. Each fighter's match result (stocks remaining) is in
     the cell directly below their name.
 
     Args:
@@ -90,7 +94,7 @@ def parse_fighters_from_row(row, df, index, fight_id, result_id):
         # Determines if a fighter is the defending champion in this match
         defending = None
         if pd.notna(row[0]) and re.findall(
-            r"^(?!.*\b(spot|added)\b).* championship$", str(row[0]).lower()
+            r"^(?!.*\b(spot|added)\b).* championship$", str(row[0]).lower().strip()
         ):
             if "vs." in str(row[0]).lower() and "(Defending)" not in fighter:
                 # Tournament/scramble match — only explicitly tagged defenders count
@@ -130,7 +134,7 @@ def parse_results(df):
         list[dict]: One dict per fighter-result with all columns.
     """
     all_results = []
-    fight_counter = FIGHT_ID_START
+    fight_counter = FIGHT_ID_START - 1  # pre-incremented on first fight, must match fight.py
     result_id = RESULT_ID_START
 
     for index, row in df.iterrows():
@@ -153,6 +157,17 @@ def main():
     df = pd.read_excel(EXCEL_PATH, sheet_name="Sheet1")
     results = parse_results(df)
     results_df = pd.DataFrame(results)
+
+    # Convert numeric columns to integers (using nullable Int64 to handle NaN)
+    int_columns = ["Result_ID", "Fight_ID"]
+    for col in int_columns:
+        if col in results_df.columns:
+            results_df[col] = results_df[col].astype("Int64")
+
+    # Seed and Match_Result may have non-numeric values, so handle separately
+    if "Seed" in results_df.columns:
+        results_df["Seed"] = pd.to_numeric(results_df["Seed"], errors="coerce").astype("Int64")
+
     results_df.to_csv(OUTPUT_CSV, index=False)
 
 
