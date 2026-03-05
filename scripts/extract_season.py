@@ -3,7 +3,7 @@
 The master file (Smash Bros Season.xlsx) stores season data in a horizontal
 layout — all 12 months are placed side by side in wide column blocks. The
 parsers (fight.py, result.py) expect a vertical layout — months stacked top
-to bottom in 6 columns. This script converts from horizontal to vertical.
+to bottom in N columns (configured via output_columns in config.yaml). This script converts from horizontal to vertical.
 
 Usage:
     1. Set season_sheet and excel_file in config.yaml
@@ -28,8 +28,10 @@ MASTER_FILE = BASE_DIR / "input" / _config["master_file"]
 OUTPUT_FILE = BASE_DIR / "input" / _config["excel_file"]
 SEASON_SHEET = _config["season_sheet"]
 
-# The parsers expect exactly 6 columns of data per row
-OUTPUT_COLUMNS = 6
+# Number of columns to extract per month block — must be wide enough for the
+# maximum number of fighters per match + 2 (header + seed columns).
+# Season 6 has Royal Rumbles with up to 8 fighters → 2 + 8 = 10 columns.
+OUTPUT_COLUMNS = _config.get("output_columns", 6)
 
 
 def find_month_columns(df):

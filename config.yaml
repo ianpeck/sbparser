@@ -9,3 +9,4 @@ excel_file: FullSeason6.xlsx           # output from extract, input for parsers 
 master_file: "Smash Bros Season.xlsx"  # master workbook with all seasons (in input/)
 season_sheet: "Season 6"               # tab name to extract from master workbook
 brands_per_week: 3                     # number of brands per week (blank rows per week)
+output_columns: 10                     # columns per month block: 2 metadata + max fighters (8 for season 6)
