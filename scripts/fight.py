@@ -115,9 +115,10 @@ def parse_championship(row):
         r"^(?!.*\b(spot|added)\b).* championship$", str(row.iloc[0]).lower().strip()
     ):
         if "vs." in str(row.iloc[0]).lower().strip():
-            # e.g. "1 vs. 2 Brawl Championship" → "Brawl Championship"
+            # e.g. "1 vs. 2 - Brawl Championship" → "Brawl Championship"
             parts = str(row.iloc[0]).split()
-            return " ".join(parts[3:])  # everything after "N vs. M"
+            remainder = " ".join(parts[3:])  # everything after "N vs. M"
+            return remainder.lstrip("- ").strip()
         return str(row.iloc[0]).strip()
     return None
 
