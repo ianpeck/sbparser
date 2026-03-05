@@ -66,7 +66,7 @@ Location_ID,Location_Name,Location_GameSeries,Location_Origin
 65,"Yoshi's Story","Super Mario",Melee
 66,"Super Happy Tree","Super Mario",64
 67,"The Great Cave Offensive",Kirby,"Wii U"
-68,"Dream Land",Kirby,64
+68,"Dreamland",Kirby,64
 69,"Fountain of Dreams",Kirby,Melee
 70,"Dream Land GB",Kirby,3DS
 71,Venom,"Star Fox",Melee
@@ -118,3 +118,10 @@ Location_ID,Location_Name,Location_GameSeries,Location_Origin
 117,"Cloud Sea of Alrest",Xenoblade,Ultimate
 118,"Mishima Dojo",Tekken,Ultimate
 119,"Hollow Bastion","Kingdom Hearts",Ultimate
+5,"Figure -8 Circuit","Super Mario",Brawl
+79,"Coliseum (Battlefield)","Fire Emblem",Ultimate
+91,"Gaur Plain (Battlefield)",Xenoblade,Ultimate
+51,"Mushroom Kingdom II","Super Mario",Melee
+19,"New Pork City (Battlefield)",Mother,Ultimate
+81,"Palutena's Temple (Omega)","Kid Icarus",Ultimate
+67,"The Great Cave Offensive (Battlefield)",Kirby,Ultimate

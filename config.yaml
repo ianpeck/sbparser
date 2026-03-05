@@ -2,9 +2,10 @@
 # Update these values when parsing a new season — no code changes needed.
 # All three scripts (extract_season.py, fight.py, result.py) read from this file.
 
-season: 5
-fight_id_start: 1911       # first Fight_ID in the output
-result_id_start: 4324      # first Result_ID in the output
-excel_file: FullSeason5.xlsx           # output from extract, input for parsers (in input/)
+season: 6
+fight_id_start: 2392       # first Fight_ID in the output
+result_id_start: 5367      # first Result_ID in the output
+excel_file: FullSeason6.xlsx           # output from extract, input for parsers (in input/)
 master_file: "Smash Bros Season.xlsx"  # master workbook with all seasons (in input/)
-season_sheet: "Season 5"               # tab name to extract from master workbook
+season_sheet: "Season 6"               # tab name to extract from master workbook
+brands_per_week: 3                     # number of brands per week (blank rows per week)

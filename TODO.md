@@ -5,18 +5,20 @@
 - [x] Refine "Spot in" logic regex for #1 contender (to catch Port Town Aero Drive but not others)
 - [x] Defending Automation?
 - [ ] Are All Tag matches captured?
-- [ ] Remake Excel Season 5
+- [x] Remake Excel Season 5
 - [x] Defending Scramble
 - [x] Defending Tournament
 - [x] Remove Seed info from Scramble Championship Row
-- [ ] Championship ID CSV add in eventually to automatically catch id
+- [x] Championship ID CSV add in eventually to automatically catch id
 - [x] Fight Types
 - [ ] Beat the clock checks for season 6, compare to other seasons on how to handle
 - [x] Seed add for Scramble
 - [x] Seed
 - [x] Cash ins
 - [x] And other strings that trigger a championship
-- [ ] QA Season 5 + fill in manual columns that are remaining
+- [x] QA Season 5 + fill in manual columns that are remaining
 - [x] What is a Handicap match?
-- [ ] Manually remove Diddy Kong forfeit defending indicator from Season 5 (ROB)
+- [x] Manually remove Diddy Kong forfeit defending indicator from Season 5 (ROB)
+- [ ] Tons of Id mappings not working for Season 6 new PPVs, Locations
+- [ ] Week Logic Breaks when Ultimate is introduced
 - [ ] Do the same for Season 6 & 7

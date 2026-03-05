@@ -23,6 +23,7 @@ with open(BASE_DIR / "config.yaml") as f:
 
 SEASON = _config["season"]
 FIGHT_ID_START = _config["fight_id_start"]
+BRANDS_PER_WEEK = _config.get("brands_per_week", 2)
 
 # Lookup dictionaries (loaded from CSVs at runtime)
 BRANDS = {}
@@ -116,7 +117,7 @@ def parse_championship(row):
         if "vs." in str(row.iloc[0]).lower().strip():
             # e.g. "1 vs. 2 Brawl Championship" → "Brawl Championship"
             parts = str(row.iloc[0]).split()
-            return parts[4] + " " + parts[5]
+            return " ".join(parts[3:])  # everything after "N vs. M"
         return str(row.iloc[0]).strip()
     return None
 
@@ -262,7 +263,7 @@ def update_week(row, week_change_counter):
     if row.isnull().all():
         week_change_counter += 1
 
-    week = math.ceil(week_change_counter / 2)
+    week = math.ceil(week_change_counter / BRANDS_PER_WEEK)
     return week, week_change_counter
 
 
