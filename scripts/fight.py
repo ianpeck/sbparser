@@ -145,9 +145,12 @@ def parse_contender(row):
         m = re.match(r"^#1\s+(\w+)\s+(\w+)$", text_lower)
         if m and _is_contender_word(m.group(1)):
             return "Y"
-        # "Spot in <championship>" pattern
         champ_pattern = "|".join(re.escape(c.lower()) for c in CHAMPIONSHIP_NAMES)
+        # "Spot in <championship>" pattern
         if re.findall(rf"^spot in ({champ_pattern})$", text_lower):
+            return "Y"
+        # "Beat the clock for <championship> spot" pattern
+        if re.findall(rf"^beat the clock for ({champ_pattern}) spot$", text_lower):
             return "Y"
     return None
 
