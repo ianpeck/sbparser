@@ -21,5 +21,6 @@
 - [x] Manually remove Diddy Kong forfeit defending indicator from Season 5 (ROB)
 - [X] Tons of Id mappings not working for Season 6 new PPVs, Locations
 - [X] Week Logic Breaks when Ultimate is introduced
-- [ ] Season 6 Month 7 is bad
+- [ ] when we moved to more thna 4 columns for fight size, tag team defending indicator broke
 - [ ] Do the same for Season 6 & 7
+
