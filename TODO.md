@@ -19,6 +19,7 @@
 - [x] QA Season 5 + fill in manual columns that are remaining
 - [x] What is a Handicap match?
 - [x] Manually remove Diddy Kong forfeit defending indicator from Season 5 (ROB)
-- [ ] Tons of Id mappings not working for Season 6 new PPVs, Locations
-- [ ] Week Logic Breaks when Ultimate is introduced
+- [X] Tons of Id mappings not working for Season 6 new PPVs, Locations
+- [X] Week Logic Breaks when Ultimate is introduced
+- [ ] Season 6 Month 7 is bad
 - [ ] Do the same for Season 6 & 7
