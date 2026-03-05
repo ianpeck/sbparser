@@ -7,6 +7,7 @@ contender indicator. Outputs fight_test.csv.
 
 import math
 import re
+from difflib import SequenceMatcher
 from pathlib import Path
 
 import pandas as pd
@@ -73,8 +74,11 @@ def load_reference_data():
 
     df_championships = pd.read_csv(CHAMPIONSHIP_CSV)
     CHAMPIONSHIP_NAMES = df_championships["Championship_Name"].tolist()
+    championship_dict = dict(
+        zip(df_championships["Championship_Name"].str.lower(), df_championships["Championship_ID"])
+    )
 
-    return location_dict, ppv_dict
+    return location_dict, ppv_dict, championship_dict
 
 
 def parse_brand_or_ppv(row):
@@ -86,11 +90,11 @@ def parse_brand_or_ppv(row):
     Returns:
         tuple: (brand_id_or_None, ppv_name_or_None, location_string)
     """
-    if pd.notna(row[1]) and pd.isna(row[0]) and not str(row[1]).isdigit():
-        label = str(row[1]).strip()
+    if pd.notna(row.iloc[1]) and pd.isna(row.iloc[0]) and not str(row.iloc[1]).isdigit():
+        label = str(row.iloc[1]).strip()
         brand = BRANDS.get(label)
         ppv = label if label not in BRANDS else None
-        location = str(row[2]).strip()
+        location = str(row.iloc[2]).strip()
         return brand, ppv, location
     return None, None, None
 
@@ -106,32 +110,43 @@ def parse_championship(row):
     Returns:
         str or None: Championship name if detected, else None.
     """
-    if pd.notna(row[0]) and re.findall(
-        r"^(?!.*\b(spot|added)\b).* championship$", str(row[0]).lower().strip()
+    if pd.notna(row.iloc[0]) and re.findall(
+        r"^(?!.*\b(spot|added)\b).* championship$", str(row.iloc[0]).lower().strip()
     ):
-        if "vs." in str(row[0]).lower().strip():
+        if "vs." in str(row.iloc[0]).lower().strip():
             # e.g. "1 vs. 2 Brawl Championship" → "Brawl Championship"
-            parts = str(row[0]).split()
+            parts = str(row.iloc[0]).split()
             return parts[4] + " " + parts[5]
-        return str(row[0]).strip()
+        return str(row.iloc[0]).strip()
     return None
+
+
+_CONTENDER_THRESHOLD = 0.75
+
+
+def _is_contender_word(word):
+    """Return True if word is close enough to 'contender' (typo-tolerant)."""
+    return SequenceMatcher(None, word, "contender").ratio() >= _CONTENDER_THRESHOLD
 
 
 def parse_contender(row):
     """Detect a #1 contender or "spot in <championship>" match.
 
+    The "contender" word is matched fuzzily to catch typos like "conteder".
+
     Returns:
         str or None: The contender description if detected, else None.
     """
-    if pd.notna(row[0]):
-        text_lower = str(row[0]).lower()
-        # "#1 Contender <name>" pattern
-        if re.findall(r"^#1 contender \w+$", text_lower):
-            return row[0]
+    if pd.notna(row.iloc[0]):
+        text_lower = str(row.iloc[0]).lower().strip()
+        # "#1 <contender-ish> <name>" pattern — fuzzy match on the middle word
+        m = re.match(r"^#1\s+(\w+)\s+(\w+)$", text_lower)
+        if m and _is_contender_word(m.group(1)):
+            return "Y"
         # "Spot in <championship>" pattern
         champ_pattern = "|".join(re.escape(c.lower()) for c in CHAMPIONSHIP_NAMES)
         if re.findall(rf"^spot in ({champ_pattern})$", text_lower):
-            return row[0]
+            return "Y"
     return None
 
 
@@ -149,12 +164,12 @@ def determine_fight_type(row, next_row, current_ppv):
     Returns:
         int: Fight type ID from FIGHT_TYPES lookup.
     """
-    if pd.isna(row[0]):
+    if pd.isna(row.iloc[0]):
         return FIGHT_TYPES["Three Stock"]
 
-    text = str(row[0])
+    text = str(row.iloc[0])
     text_lower = text.lower().strip()
-    next_text_lower = str(next_row[0]).lower().strip() if next_row is not None else ""
+    next_text_lower = str(next_row.iloc[0]).lower().strip() if next_row is not None else ""
 
     # Tag match — checked first because tag matches can overlap with other types
     if "Tag" in text:
@@ -175,7 +190,7 @@ def determine_fight_type(row, next_row, current_ppv):
     # Special championship / contender / spot-in on a row with a following row
     if text_lower in [
         "special championship", "#1 contender special", "spot in special"
-    ] and pd.notna(next_row[0]) if next_row is not None else False:
+    ] and pd.notna(next_row.iloc[0]) if next_row is not None else False:
         return FIGHT_TYPES["Special"]
 
     # Championship Scramble PPV — any "vs" row during this PPV
@@ -224,8 +239,8 @@ def parse_month(row, current_month):
     Returns:
         str: Updated month value (unchanged if this row is not a month header).
     """
-    if pd.notna(row[0]) and "Month" in str(row[0]):
-        return str(row[0]).replace("Month ", "")
+    if pd.notna(row.iloc[0]) and "Month" in str(row.iloc[0]):
+        return str(row.iloc[0]).replace("Month ", "")
     return current_month
 
 
@@ -240,7 +255,7 @@ def update_week(row, week_change_counter):
         tuple: (week_number, updated_counter)
     """
     # Reset counter when a new month starts
-    if pd.notna(row[0]) and "Month" in str(row[0]):
+    if pd.notna(row.iloc[0]) and "Month" in str(row.iloc[0]):
         week_change_counter = 0
 
     # A fully-blank row signals a show boundary
@@ -260,8 +275,14 @@ def is_fight_row(row):
 # Main parsing loop
 # ---------------------------------------------------------------------------
 
-def parse_fights(df):
+def parse_fights(df, location_dict, ppv_dict, championship_dict):
     """Walk every row of the spreadsheet and build the fights table.
+
+    Args:
+        df: The raw spreadsheet DataFrame.
+        location_dict: Mapping of lowercase location name → Location_ID.
+        ppv_dict: Mapping of lowercase PPV name → PPV_ID.
+        championship_dict: Mapping of lowercase championship name → Championship_ID.
 
     Returns:
         pd.DataFrame: One row per fight with all metadata columns.
@@ -277,9 +298,9 @@ def parse_fights(df):
     weeks = []
 
     current_brand = None
-    current_location = None
-    current_ppv = None
-    current_championship = None
+    current_location_id = None
+    current_ppv = None        # PPV name — kept as string for fight-type logic
+    current_ppv_id = None     # PPV ID — written to output
     current_month = None
     fight_counter = FIGHT_ID_START - 1
     week_change_counter = 0
@@ -292,10 +313,16 @@ def parse_fights(df):
         if brand is not None or ppv is not None:
             current_brand = brand
             current_ppv = ppv
-            current_location = location
+            current_ppv_id = ppv_dict.get(ppv.lower()) if ppv else None
+            current_location_id = location_dict.get(location.lower()) if location else None
 
-        # --- Championship header ---
-        current_championship = parse_championship(row)
+        # --- Championship header (row-level: championship header and fight are on the same row) ---
+        champ_name = parse_championship(row)
+        if champ_name is not None:
+            champ_key = re.sub(r"\s+championship$", "", champ_name.lower().strip())
+            championship_id = championship_dict.get(champ_key)
+        else:
+            championship_id = None
 
         # --- Contender indicator ---
         contender = parse_contender(row)
@@ -314,10 +341,10 @@ def parse_fights(df):
             fight_counter += 1
             fight_ids.append(fight_counter)
             brand_ids.append(current_brand)
-            location_ids.append(current_location)
+            location_ids.append(current_location_id)
             fight_type_ids.append(current_fight_type)
-            championship_ids.append(current_championship)
-            ppv_ids.append(current_ppv)
+            championship_ids.append(championship_id)
+            ppv_ids.append(current_ppv_id)
             contenders.append(contender)
             months.append(current_month)
             weeks.append(current_week)
@@ -338,12 +365,12 @@ def parse_fights(df):
 
 def main():
     """Entry point: load data, parse fights, and write output CSV."""
-    load_reference_data()  # validates that reference CSVs exist
+    location_dict, ppv_dict, championship_dict = load_reference_data()
     df = pd.read_excel(EXCEL_PATH, sheet_name="Sheet1")
-    fight_df = parse_fights(df)
+    fight_df = parse_fights(df, location_dict, ppv_dict, championship_dict)
 
     # Convert numeric columns to integers (using nullable Int64 to handle NaN)
-    int_columns = ["Fight_ID", "Brand_ID", "FightType_ID", "Season_ID"]
+    int_columns = ["Fight_ID", "Location_ID", "Brand_ID", "PPV_ID", "Championship_ID", "FightType_ID", "Season_ID"]
     for col in int_columns:
         if col in fight_df.columns:
             fight_df[col] = fight_df[col].astype("Int64")

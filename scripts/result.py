@@ -93,16 +93,21 @@ def parse_fighters_from_row(row, df, index, fight_id, result_id):
         # --- Defending indicator ---
         # Determines if a fighter is the defending champion in this match
         defending = None
-        if pd.notna(row[0]) and re.findall(
-            r"^(?!.*\b(spot|added)\b).* championship$", str(row[0]).lower().strip()
+        # If the row below (col 0) contains "forfeited title", the title was vacated — no defender
+        next_col0 = str(df.iloc[index + 1, 0]) if index + 1 < len(df) else ""
+        title_forfeited = "forfeited" in next_col0.lower() and "title" in next_col0.lower()
+        if title_forfeited:
+            defending = None
+        elif pd.notna(row.iloc[0]) and re.findall(
+            r"^(?!.*\b(spot|added)\b).* championship$", str(row.iloc[0]).lower().strip()
         ):
-            if "vs." in str(row[0]).lower() and "(Defending)" not in fighter:
+            if "vs." in str(row.iloc[0]).lower() and "(Defending)" not in fighter:
                 # Tournament/scramble match — only explicitly tagged defenders count
                 defending = None
             elif fighter_col_index == 2:
                 # First fighter column is the defending champion
                 defending = "Y"
-            elif fighter_col_index == 3 and str(row[0].lower()) == "unified tag team championship":
+            elif fighter_col_index == 3 and str(row.iloc[0]).lower() == "unified tag team championship":
                 # Tag partner of the defending champion also counts
                 defending = "Y"
         elif "(Defending)" in fighter:
@@ -143,7 +148,7 @@ def parse_results(df):
             fight_counter += 1
 
         # Fighter rows have a numeric seed in column 1
-        if str(row[1]).isdigit():
+        if str(row.iloc[1]).isdigit():
             new_results, result_id = parse_fighters_from_row(
                 row, df, index, fight_counter, result_id
             )
