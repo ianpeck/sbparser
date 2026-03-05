@@ -77,8 +77,8 @@ def extract_month_block(df, start_col, end_col):
 
     for i in range(len(block)):
         # Check if any cell in this row contains draft/swap keywords
-        row_text = [str(cell).lower() for cell in block.iloc[i]]
-        if any(keyword in text for text in row_text for keyword in draft_keywords):
+        col0_text = str(block.iloc[i, 0]).lower()
+        if any(keyword in col0_text for keyword in draft_keywords):
             # Stop extraction here - don't include this row or anything after
             break
 
