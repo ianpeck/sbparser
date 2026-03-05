@@ -100,35 +100,46 @@ def parse_brand_or_ppv(row):
     return None, None, None
 
 
+_CONTENDER_THRESHOLD = 0.75
+_CHAMPIONSHIP_THRESHOLD = 0.80
+
+
+def _is_contender_word(word):
+    """Return True if word is close enough to 'contender' (typo-tolerant)."""
+    return SequenceMatcher(None, word, "contender").ratio() >= _CONTENDER_THRESHOLD
+
+
+def _is_championship_word(word):
+    """Return True if word is close enough to 'championship' (typo-tolerant)."""
+    return SequenceMatcher(None, word, "championship").ratio() >= _CHAMPIONSHIP_THRESHOLD
+
+
 def parse_championship(row):
     """Detect a championship match header row.
 
     Matches rows like "Brawl Championship" but excludes rows containing
     "spot" or "added" (those are contender matches, not title matches).
     For tournament-style championship rows with "vs.", extract just the
-    championship name portion.
+    championship name portion. The word "championship" is matched fuzzily
+    to catch typos like "Champiosnhip".
 
     Returns:
-        str or None: Championship name if detected, else None.
+        str or None: Championship name (normalized spelling) if detected, else None.
     """
-    if pd.notna(row.iloc[0]) and re.findall(
-        r"^(?!.*\b(spot|added)\b).* championship$", str(row.iloc[0]).lower().strip()
-    ):
-        if "vs." in str(row.iloc[0]).lower().strip():
-            # e.g. "1 vs. 2 - Brawl Championship" → "Brawl Championship"
-            parts = str(row.iloc[0]).split()
-            remainder = " ".join(parts[3:])  # everything after "N vs. M"
-            return remainder.lstrip("- ").strip()
-        return str(row.iloc[0]).strip()
-    return None
-
-
-_CONTENDER_THRESHOLD = 0.75
-
-
-def _is_contender_word(word):
-    """Return True if word is close enough to 'contender' (typo-tolerant)."""
-    return SequenceMatcher(None, word, "contender").ratio() >= _CONTENDER_THRESHOLD
+    if pd.isna(row.iloc[0]):
+        return None
+    words = str(row.iloc[0]).strip().split()
+    if not words or not _is_championship_word(words[-1].lower()):
+        return None
+    text_lower = str(row.iloc[0]).lower().strip()
+    if re.search(r"\b(spot|added)\b", text_lower):
+        return None
+    # Normalize the last word to "Championship" regardless of original spelling
+    if "vs." in text_lower:
+        # e.g. "1 vs. 4 - Brawl Champiosnhip" → "Brawl Championship"
+        remainder = " ".join(words[3:-1] + ["Championship"])
+        return remainder.lstrip("- ").strip()
+    return " ".join(words[:-1] + ["Championship"])
 
 
 def parse_contender(row):
