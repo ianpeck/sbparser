@@ -24,4 +24,5 @@
 - [ ] when we moved to more thna 4 columns for fight size, tag team defending indicator broke (one fighter gets it, the other doesn't)
 - [ ] Scramble defending indicator broken season 6 and 7 at times
 - [ ] Do the same for Season 6 [X] 7 [ ]
+- [ ] Season 7 should only run for month 11 and 12 since CSV is not up to date with typo fixes/manual championship fixes
  
